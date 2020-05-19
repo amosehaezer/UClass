@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0A55E92473DF480002F23C /* TeacherAddTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A55E82473DF480002F23C /* TeacherAddTopicViewController.swift */; };
 		F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB2C36246A9C0F00CAE4A2 /* AppDelegate.swift */; };
 		F0FB2C39246A9C0F00CAE4A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB2C38246A9C0F00CAE4A2 /* SceneDelegate.swift */; };
 		F0FB2C3B246A9C0F00CAE4A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB2C3A246A9C0F00CAE4A2 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A0A55E82473DF480002F23C /* TeacherAddTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAddTopicViewController.swift; sourceTree = "<group>"; };
 		EE2499862473C0C500DBB3CD /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "../../../../../Library/Fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		EE2499872473C0C500DBB3CD /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HeavyItalic.ttf"; path = "../../../../../Library/Fonts/Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
 		EE2499882473C0C500DBB3CD /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hairline.ttf"; path = "../../../../../Library/Fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				F0FB2C44246A9C1000CAE4A2 /* LaunchScreen.storyboard */,
 				F0FB2C47246A9C1000CAE4A2 /* Info.plist */,
 				F0FB2C3F246A9C0F00CAE4A2 /* UClass.xcdatamodeld */,
+				5A0A55E82473DF480002F23C /* TeacherAddTopicViewController.swift */,
 			);
 			path = UClass;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				F0FB2C3B246A9C0F00CAE4A2 /* ViewController.swift in Sources */,
 				F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */,
 				F0FB2C41246A9C0F00CAE4A2 /* UClass.xcdatamodeld in Sources */,
+				5A0A55E92473DF480002F23C /* TeacherAddTopicViewController.swift in Sources */,
 				F0FB2C39246A9C0F00CAE4A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
