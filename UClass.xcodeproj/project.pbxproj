@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45C3D17B24746161009249D7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C3D17A24746161009249D7 /* SignInViewController.swift */; };
 		EE2499992473C2D100DBB3CD /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE2499982473C2D100DBB3CD /* ForgotPassword.storyboard */; };
 		EE2499BE2473D2C800DBB3CD /* SF-Pro-Text-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEAFA1E42472984B0062CEF1 /* SF-Pro-Text-Black.otf */; };
 		EE2499BF2473D2C800DBB3CD /* SF-Pro-Text-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEAFA1E92472984B0062CEF1 /* SF-Pro-Text-BlackItalic.otf */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45C3D17A24746161009249D7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EE2499982473C2D100DBB3CD /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		EEAFA1E12472984B0062CEF1 /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
 		EEAFA1E22472984B0062CEF1 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				F0FB2C38246A9C0F00CAE4A2 /* SceneDelegate.swift */,
 				F0FB2C3A246A9C0F00CAE4A2 /* ViewController.swift */,
 				F0FB2C3C246A9C0F00CAE4A2 /* Main.storyboard */,
+				45C3D17A24746161009249D7 /* SignInViewController.swift */,
 				F0FB2C42246A9C1000CAE4A2 /* Assets.xcassets */,
 				F0FB2C44246A9C1000CAE4A2 /* LaunchScreen.storyboard */,
 				EE2499982473C2D100DBB3CD /* ForgotPassword.storyboard */,
@@ -329,6 +332,7 @@
 				F0FB2C3B246A9C0F00CAE4A2 /* ViewController.swift in Sources */,
 				F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */,
 				F0FB2C41246A9C0F00CAE4A2 /* UClass.xcdatamodeld in Sources */,
+				45C3D17B24746161009249D7 /* SignInViewController.swift in Sources */,
 				F0FB2C39246A9C0F00CAE4A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
