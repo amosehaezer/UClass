@@ -26,7 +26,7 @@ class SignInViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         pickerView.dataSource = self
 
         RoleField.inputView = pickerView
-        RoleField.textAlignment = .center
+        RoleField.textAlignment = .left
         
       }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
