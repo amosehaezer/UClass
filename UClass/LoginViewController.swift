@@ -1,21 +1,18 @@
 //
-//  LogInViewController.swift
+//  LoginViewController.swift
 //  UClass
 //
-//  Created by Vincentius Calvin on 19/05/20.
+//  Created by Amos Ebenhaezer on 25/05/20.
 //  Copyright © 2020 Amos Ebenhaezer. All rights reserved.
 //
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    @IBOutlet weak var loginLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        loginLabel.font = UIFont(name: "Lato-Black", size: 38)
-
         // Do any additional setup after loading the view.
     }
     
