@@ -54,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		517A7CD32473DD1100367FB3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		517A7CD52473DDE500367FB3 /* LatoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatoLabel.swift; sourceTree = "<group>"; };
 		EE2499982473C2D100DBB3CD /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		EEAFA1E12472984B0062CEF1 /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
 		EEAFA1E22472984B0062CEF1 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
@@ -209,6 +211,8 @@
 				F0FB2C38246A9C0F00CAE4A2 /* SceneDelegate.swift */,
 				F0FB2C3A246A9C0F00CAE4A2 /* ViewController.swift */,
 				F0FB2C3C246A9C0F00CAE4A2 /* Main.storyboard */,
+				517A7CD52473DDE500367FB3 /* LatoLabel.swift */,
+				517A7CD32473DD1100367FB3 /* LogInViewController.swift */,
 				F0FB2C42246A9C1000CAE4A2 /* Assets.xcassets */,
 				F0FB2C44246A9C1000CAE4A2 /* LaunchScreen.storyboard */,
 				EE2499982473C2D100DBB3CD /* ForgotPassword.storyboard */,
@@ -328,7 +332,9 @@
 			files = (
 				F0FB2C3B246A9C0F00CAE4A2 /* ViewController.swift in Sources */,
 				F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */,
+				517A7CD62473DDE500367FB3 /* LatoLabel.swift in Sources */,
 				F0FB2C41246A9C0F00CAE4A2 /* UClass.xcdatamodeld in Sources */,
+				517A7CD42473DD1100367FB3 /* LogInViewController.swift in Sources */,
 				F0FB2C39246A9C0F00CAE4A2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

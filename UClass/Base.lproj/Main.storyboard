@@ -8,6 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
         <array key="Lato-Black.ttf">
             <string>Lato-Black</string>
         </array>
@@ -19,11 +21,28 @@
         <!--Login-->
         <scene sceneID="Qd5-Sb-Nnz">
             <objects>
+                <viewController title="Login" id="WEp-4q-LvP" customClass="LogInViewController" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
                 <viewController title="Login" id="WEp-4q-LvP" customClass="ViewController" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x2C-aK-F1k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QG-qC-4hW" customClass="LatoLabel" customModule="UClass" customModuleProvider="target">
+                                <rect key="frame" x="20" y="338.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="Lato-Black"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="latoSize">
+                                        <real key="value" value="38"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please log in to start using this app." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-rj-qtw">
+                                <rect key="frame" x="20" y="375" width="374" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Log In" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QG-qC-4hW">
                                 <rect key="frame" x="34" y="301" width="346" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -84,6 +103,7 @@
                         <viewLayoutGuide key="safeArea" id="3ct-qy-oFe"/>
                     </view>
                     <connections>
+                        <outlet property="loginLabel" destination="8QG-qC-4hW" id="Jso-yK-XYr"/>
                         <outlet property="emailTextfield" destination="SHZ-Ot-hBu" id="yHy-Ms-S9J"/>
                         <outlet property="passwordTextfield" destination="Cpk-JI-Sde" id="jI2-lK-01a"/>
                     </connections>
