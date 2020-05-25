@@ -4,19 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Lato-Black.ttf</string>
-		<string>Lato-Italic.ttf</string>
-		<string>Lato-LightItalic.ttf</string>
-		<string>Lato-Thin.ttf</string>
-		<string>Lato-Bold.ttf</string>
-		<string>Lato-Regular.ttf</string>
-		<string>Lato-BlackItalic.ttf</string>
-		<string>Lato-BoldItalic.ttf</string>
-		<string>Lato-Light.ttf</string>
-		<string>Lato-ThinItalic.ttf</string>
+		<string>SF-Pro-Text-Regular.otf</string>
 	</array>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
