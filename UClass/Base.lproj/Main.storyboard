@@ -585,6 +585,31 @@
             </objects>
             <point key="canvasLocation" x="-152.17391304347828" y="991.74107142857133"/>
         </scene>
+        <!--NotificationVC-->
+        <scene sceneID="gne-sb-khb">
+            <objects>
+                <viewController id="m3K-x0-BMq" customClass="NotificationVC" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tqn-GQ-WZS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fRx-JT-lY9">
+                                <rect key="frame" x="0.0" y="89" width="414" height="807"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="background"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="background"/>
+                        <viewLayoutGuide key="safeArea" id="jcW-Ts-qze"/>
+                    </view>
+                    <connections>
+                        <outlet property="notificationTable" destination="fRx-JT-lY9" id="oxa-Pq-hMs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOX-ld-Q0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444.9275362318842" y="-586.60714285714278"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bold" catalog="system" width="128" height="128"/>
