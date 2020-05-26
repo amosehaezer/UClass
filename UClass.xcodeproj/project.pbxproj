@@ -37,7 +37,9 @@
 		F0606370247BE8590096BA71 /* DiscussionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060636E247BE8590096BA71 /* DiscussionHeaderView.swift */; };
 		F0606371247BE8590096BA71 /* DiscussionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F060636F247BE8590096BA71 /* DiscussionHeaderView.xib */; };
 		F0A8E55C247C092300E5BE26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A8E55B247C092300E5BE26 /* LoginViewController.swift */; };
+		F0B03B2E247D057C00DCBB15 /* TeacherAddTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B03B2D247D057C00DCBB15 /* TeacherAddTopicViewController.swift */; };
 		F0DD22A8247BE91F0052088C /* DiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD22A7247BE91F0052088C /* DiscussionVC.swift */; };
+		F0F7FE07247D067B00BFB2FE /* LatoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A7CD52473DDE500367FB3 /* LatoLabel.swift */; };
 		F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB2C36246A9C0F00CAE4A2 /* AppDelegate.swift */; };
 		F0FB2C39246A9C0F00CAE4A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB2C38246A9C0F00CAE4A2 /* SceneDelegate.swift */; };
 		F0FB2C3B246A9C0F00CAE4A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB2C3A246A9C0F00CAE4A2 /* ViewController.swift */; };
@@ -90,6 +92,7 @@
 		F08FAD992473D4D500CEBCFB /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		F08FAD9A2473D4D500CEBCFB /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		F0A8E55B247C092300E5BE26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F0B03B2D247D057C00DCBB15 /* TeacherAddTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAddTopicViewController.swift; sourceTree = "<group>"; };
 		F0DD22A7247BE91F0052088C /* DiscussionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionVC.swift; sourceTree = "<group>"; };
 		F0E8E92B2473C53900B0C339 /* UClass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UClass.entitlements; sourceTree = "<group>"; };
 		F0E8E92D2473C53F00B0C339 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -169,10 +172,13 @@
 		F04BBB07247BEA1300806000 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0F7FE08247D06D200BFB2FE /* Discussion */,
 				F0FB2C3A246A9C0F00CAE4A2 /* ViewController.swift */,
 				F0576D86247C1E6000F8D313 /* Class */,
 				F0576D8B247C1EF100F8D313 /* SignInViewController.swift */,
 				F0576D8D247C1F1300F8D313 /* ProfilViewController.swift */,
+				F0B03B2D247D057C00DCBB15 /* TeacherAddTopicViewController.swift */,
+				F0A8E55B247C092300E5BE26 /* LoginViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 		F0576D86247C1E6000F8D313 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				517A7CD52473DDE500367FB3 /* LatoLabel.swift */,
 				F0576D87247C1E7F00F8D313 /* CustomView.swift */,
 				F0576D89247C1E9C00F8D313 /* CustomImage.swift */,
 			);
@@ -213,6 +220,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F0F7FE08247D06D200BFB2FE /* Discussion */ = {
+			isa = PBXGroup;
+			children = (
+				F0DD22A7247BE91F0052088C /* DiscussionVC.swift */,
+				F060636F247BE8590096BA71 /* DiscussionHeaderView.xib */,
+				F060636E247BE8590096BA71 /* DiscussionHeaderView.swift */,
+				F05E4340247BE77D00162C84 /* RepliesCell.swift */,
+				F05E4341247BE77D00162C84 /* RepliesCell.xib */,
+			);
+			path = Discussion;
+			sourceTree = "<group>";
+		};
 		F0FB2C2A246A9C0F00CAE4A2 = {
 			isa = PBXGroup;
 			children = (
@@ -241,17 +260,10 @@
 				F0FB2C36246A9C0F00CAE4A2 /* AppDelegate.swift */,
 				F0FB2C38246A9C0F00CAE4A2 /* SceneDelegate.swift */,
 				F0FB2C3C246A9C0F00CAE4A2 /* Main.storyboard */,
-				517A7CD52473DDE500367FB3 /* LatoLabel.swift */,
 				F0FB2C42246A9C1000CAE4A2 /* Assets.xcassets */,
 				F0FB2C44246A9C1000CAE4A2 /* LaunchScreen.storyboard */,
 				F0FB2C47246A9C1000CAE4A2 /* Info.plist */,
 				F0FB2C3F246A9C0F00CAE4A2 /* UClass.xcdatamodeld */,
-				F05E4340247BE77D00162C84 /* RepliesCell.swift */,
-				F05E4341247BE77D00162C84 /* RepliesCell.xib */,
-				F060636E247BE8590096BA71 /* DiscussionHeaderView.swift */,
-				F060636F247BE8590096BA71 /* DiscussionHeaderView.xib */,
-				F0DD22A7247BE91F0052088C /* DiscussionVC.swift */,
-				F0A8E55B247C092300E5BE26 /* LoginViewController.swift */,
 			);
 			path = UClass;
 			sourceTree = "<group>";
@@ -353,9 +365,11 @@
 				F0DD22A8247BE91F0052088C /* DiscussionVC.swift in Sources */,
 				F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */,
 				F05E4342247BE77D00162C84 /* RepliesCell.swift in Sources */,
+				F0F7FE07247D067B00BFB2FE /* LatoLabel.swift in Sources */,
 				F0576D8E247C1F1300F8D313 /* ProfilViewController.swift in Sources */,
 				F0A8E55C247C092300E5BE26 /* LoginViewController.swift in Sources */,
 				F0606370247BE8590096BA71 /* DiscussionHeaderView.swift in Sources */,
+				F0B03B2E247D057C00DCBB15 /* TeacherAddTopicViewController.swift in Sources */,
 				EE33DB52247C0CAC008B5242 /* ForgotPasswordViewController.swift in Sources */,
 				F0FB2C41246A9C0F00CAE4A2 /* UClass.xcdatamodeld in Sources */,
 				F0576D88247C1E7F00F8D313 /* CustomView.swift in Sources */,

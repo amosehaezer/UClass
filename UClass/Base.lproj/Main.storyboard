@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mmc-ad-nHs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WEp-4q-LvP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -11,7 +11,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -20,6 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-474" y="131"/>
         </scene>
@@ -230,7 +230,7 @@
         <!--Forgot Password View Controller-->
         <scene sceneID="l6T-5x-AN7">
             <objects>
-                <viewController storyboardIdentifier="ForgotPassword" id="4xe-fu-xlo" customClass="ForgotPasswordViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPassword" id="4xe-fu-xlo" customClass="ForgotPasswordViewController" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7nk-oD-PAb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,7 +356,7 @@
         <!--OTP-->
         <scene sceneID="DbM-Jf-Wtp">
             <objects>
-                <viewController title="OTP" id="gRk-tk-CcZ" customClass="OTPViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="OTP" id="gRk-tk-CcZ" customClass="OTPViewController" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pcq-Sk-L9f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,8 +452,147 @@
             </objects>
             <point key="canvasLocation" x="1445" y="834"/>
         </scene>
+        <!--Teacher Add Topic View Controller-->
+        <scene sceneID="nH1-fU-l8j">
+            <objects>
+                <viewController id="iNy-42-RMR" customClass="TeacherAddTopicViewController" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SHb-V4-a26">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Topic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-x6-3uC">
+                                <rect key="frame" x="20" y="104" width="146" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXj-gd-VtC">
+                                <rect key="frame" x="20" y="165" width="35.5" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z02-vc-fRd">
+                                <rect key="frame" x="20" y="195.5" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYm-xl-19U">
+                                <rect key="frame" x="20" y="249.5" width="93" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FST-Jj-0bb">
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
+                                <color key="backgroundColor" name="oxford-blue"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qo-il-dq0">
+                                <rect key="frame" x="20" y="278" width="374" height="373"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUw-ZR-Lc8" userLabel="Bold">
+                                        <rect key="frame" x="10" y="343" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="bold" catalog="system"/>
+                                        <connections>
+                                            <action selector="boldButton:" destination="iNy-42-RMR" eventType="touchUpInside" id="ySo-hA-tMg"/>
+                                            <action selector="toggleBoldface:" destination="Z7J-MU-bMn" eventType="touchUpInside" id="HLf-MQ-UeA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T84-Oj-dZE" userLabel="Italic">
+                                        <rect key="frame" x="50" y="343" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="italic" catalog="system"/>
+                                        <connections>
+                                            <action selector="italicButton:" destination="iNy-42-RMR" eventType="touchUpInside" id="j47-FJ-aoZ"/>
+                                            <action selector="toggleItalics:" destination="Z7J-MU-bMn" eventType="touchUpInside" id="iBe-cc-tvy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFD-i6-4w7" userLabel="Attatchment">
+                                        <rect key="frame" x="265" y="343" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="paperclip" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPh-DS-Z7I" userLabel="Photo">
+                                        <rect key="frame" x="305" y="343" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="camera.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="cameraButton:" destination="iNy-42-RMR" eventType="touchUpInside" id="S9e-59-clt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALl-Xh-hiY" userLabel="Underline">
+                                        <rect key="frame" x="90" y="343" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="underline" catalog="system"/>
+                                        <connections>
+                                            <action selector="toggleUnderline:" destination="Z7J-MU-bMn" eventType="touchUpInside" id="DrP-JM-cGX"/>
+                                            <action selector="underlineButton:" destination="iNy-42-RMR" eventType="touchUpInside" id="wAw-Iu-qTG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5N-LL-Bi5" userLabel="Mic">
+                                        <rect key="frame" x="345" y="343" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="mic.fill" catalog="system"/>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z7J-MU-bMn">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="335"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vXj-gd-VtC" firstAttribute="top" secondItem="Sga-x6-3uC" secondAttribute="bottom" constant="20" id="AGF-Tk-l8f"/>
+                            <constraint firstItem="cQS-o2-SYK" firstAttribute="trailing" secondItem="Z02-vc-fRd" secondAttribute="trailing" constant="20" id="HLk-Np-ts3"/>
+                            <constraint firstItem="Sga-x6-3uC" firstAttribute="top" secondItem="cQS-o2-SYK" secondAttribute="top" constant="60" id="NbU-Eh-93P"/>
+                            <constraint firstItem="rYm-xl-19U" firstAttribute="top" secondItem="Z02-vc-fRd" secondAttribute="bottom" constant="20" id="Or0-ae-1im"/>
+                            <constraint firstItem="cQS-o2-SYK" firstAttribute="trailing" secondItem="FST-Jj-0bb" secondAttribute="trailing" constant="20" id="TxW-SG-7SS"/>
+                            <constraint firstItem="FST-Jj-0bb" firstAttribute="bottom" secondItem="cQS-o2-SYK" secondAttribute="bottom" id="Zwe-nw-9IZ"/>
+                            <constraint firstItem="vXj-gd-VtC" firstAttribute="leading" secondItem="cQS-o2-SYK" secondAttribute="leading" constant="20" id="b78-po-IAh"/>
+                            <constraint firstItem="Sga-x6-3uC" firstAttribute="leading" secondItem="cQS-o2-SYK" secondAttribute="leading" constant="20" id="fz4-YQ-Ybk"/>
+                            <constraint firstItem="Z02-vc-fRd" firstAttribute="leading" secondItem="cQS-o2-SYK" secondAttribute="leading" constant="20" id="hgv-Mi-3vv"/>
+                            <constraint firstItem="rYm-xl-19U" firstAttribute="leading" secondItem="cQS-o2-SYK" secondAttribute="leading" constant="20" id="mJK-cR-IXl"/>
+                            <constraint firstItem="Z02-vc-fRd" firstAttribute="top" secondItem="vXj-gd-VtC" secondAttribute="bottom" constant="10" id="nk0-dy-22H"/>
+                            <constraint firstItem="FST-Jj-0bb" firstAttribute="leading" secondItem="cQS-o2-SYK" secondAttribute="leading" constant="20" id="ycd-yT-q4O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cQS-o2-SYK"/>
+                    </view>
+                    <connections>
+                        <outlet property="boldButtonOutlet" destination="IUw-ZR-Lc8" id="9LF-VR-yNX"/>
+                        <outlet property="descriptionTextView" destination="Z7J-MU-bMn" id="XUb-Pl-sq8"/>
+                        <outlet property="descriptionUIView" destination="4qo-il-dq0" id="xyP-b6-cBl"/>
+                        <outlet property="doneButton" destination="FST-Jj-0bb" id="7Eu-Xk-hX3"/>
+                        <outlet property="italicButtonOutlet" destination="T84-Oj-dZE" id="vJO-Cg-POT"/>
+                        <outlet property="titleTextField" destination="Z02-vc-fRd" id="SbO-lV-Key"/>
+                        <outlet property="underlineButtonOutlet" destination="ALl-Xh-hiY" id="Ei1-7u-fTE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvm-x5-rcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152.17391304347828" y="991.74107142857133"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bold" catalog="system" width="128" height="128"/>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="italic" catalog="system" width="118" height="128"/>
+        <image name="mic.fill" catalog="system" width="108" height="128"/>
+        <image name="paperclip" catalog="system" width="128" height="128"/>
+        <image name="underline" catalog="system" width="105" height="128"/>
         <namedColor name="app-red">
             <color red="0.58799999952316284" green="0.1289999932050705" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
