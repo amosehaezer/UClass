@@ -47,11 +47,13 @@ class DiscussionVC: UIViewController {
     @IBOutlet weak var discussionsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         self.discussionsTableView.dataSource = self
         self.discussionsTableView.delegate = self
         setupTableView()
-//        discussionsTableView.rowHeight = UITableView.automaticDimension
-//        discussionsTableView.estimatedRowHeight = 600
+        discussionsTableView.rowHeight = UITableView.automaticDimension
+        discussionsTableView.estimatedRowHeight = 600
         //discussionsTableView.layer.cornerRadius = 20
         discussionsTableView.sectionHeaderHeight = UITableView.automaticDimension
         discussionsTableView.estimatedSectionHeaderHeight = 600
@@ -105,12 +107,13 @@ class DiscussionVC: UIViewController {
 
             }else{
                 button.setTitle("Replies (\(testList[section].replies.count)) 􀆇", for: .normal)
-                discussionsTableView.insertRows(at: indexPaths, with: .bottom)
+                discussionsTableView.insertRows(at: indexPaths, with: .fade)
 
 
             }
             discussionsTableView.reloadData()
         }
+        
 
 
     }
@@ -252,6 +255,7 @@ extension DiscussionVC: UITableViewDataSource {
             cell.profileImage.image = testList[section].replies[row].profile
             cell.datePostLabel.text = testList[section].replies[row].datePost
             cell.profileName.text = testList[section].replies[row].name
+            
             cell.likeCount.text = "\(testList[section].replies[row].like)"
             cell.dislikeCount.text = "\(testList[section].replies[row].dislike)"
             cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height/2
