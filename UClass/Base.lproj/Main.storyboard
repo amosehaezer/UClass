@@ -219,6 +219,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqu-qb-cy6">
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
+                                <color key="backgroundColor" name="oxford-blue"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qV-ml-jyI">
                                 <rect key="frame" x="20" y="278" width="374" height="373"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -272,7 +279,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="335"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -288,11 +295,14 @@
                             <constraint firstItem="Qql-SK-bfN" firstAttribute="leading" secondItem="8xZ-X1-Bqw" secondAttribute="leading" constant="20" id="33d-Cb-Wl9"/>
                             <constraint firstItem="Jo1-bg-lwj" firstAttribute="top" secondItem="nRK-2c-4bR" secondAttribute="bottom" constant="20" id="7tW-AG-H2i"/>
                             <constraint firstItem="Qql-SK-bfN" firstAttribute="top" secondItem="Jo1-bg-lwj" secondAttribute="bottom" constant="10" id="BVo-vQ-vrE"/>
+                            <constraint firstItem="8xZ-X1-Bqw" firstAttribute="trailing" secondItem="Vqu-qb-cy6" secondAttribute="trailing" constant="20" id="DX9-3b-yQx"/>
                             <constraint firstItem="Jo1-bg-lwj" firstAttribute="leading" secondItem="8xZ-X1-Bqw" secondAttribute="leading" constant="20" id="FSJ-SJ-cRi"/>
                             <constraint firstItem="2TN-bg-Huo" firstAttribute="top" secondItem="Qql-SK-bfN" secondAttribute="bottom" constant="20" id="S51-hO-H9T"/>
                             <constraint firstItem="nRK-2c-4bR" firstAttribute="top" secondItem="8xZ-X1-Bqw" secondAttribute="top" constant="60" id="cWc-l7-8TW"/>
+                            <constraint firstItem="Vqu-qb-cy6" firstAttribute="leading" secondItem="8xZ-X1-Bqw" secondAttribute="leading" constant="20" id="esf-bw-fsx"/>
                             <constraint firstItem="2TN-bg-Huo" firstAttribute="leading" secondItem="8xZ-X1-Bqw" secondAttribute="leading" constant="20" id="gYr-3E-56k"/>
                             <constraint firstItem="nRK-2c-4bR" firstAttribute="leading" secondItem="8xZ-X1-Bqw" secondAttribute="leading" constant="20" id="lVX-2F-DCp"/>
+                            <constraint firstItem="Vqu-qb-cy6" firstAttribute="bottom" secondItem="8xZ-X1-Bqw" secondAttribute="bottom" id="r80-ii-DxI"/>
                             <constraint firstItem="8xZ-X1-Bqw" firstAttribute="trailing" secondItem="Qql-SK-bfN" secondAttribute="trailing" constant="20" id="xm8-TH-SwH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8xZ-X1-Bqw"/>
@@ -301,6 +311,7 @@
                         <outlet property="boldButtonOutlet" destination="1v8-Qv-hsb" id="FFo-4D-nBR"/>
                         <outlet property="descriptionTextView" destination="uZ0-Sx-dvo" id="LVa-kO-kLS"/>
                         <outlet property="descriptionUIView" destination="5qV-ml-jyI" id="Cyf-87-3If"/>
+                        <outlet property="doneButton" destination="Vqu-qb-cy6" id="y51-CJ-dxH"/>
                         <outlet property="italicButtonOutlet" destination="u0m-yp-kTc" id="jpT-eu-VmM"/>
                         <outlet property="titleTextField" destination="Qql-SK-bfN" id="GEU-N3-mhl"/>
                         <outlet property="underlineButtonOutlet" destination="nv4-gD-JFP" id="svm-Ob-4ir"/>

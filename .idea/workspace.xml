@@ -20,20 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5bd0b5e-6114-4ee9-b3a6-39d31f365f32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/UClass/Assets.xcassets/.imageset/Contents.json" afterPathEscaped="$PROJECT_DIR$/UClass/Assets.xcassets/􀍕.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UClass/Assets.xcassets/.imageset/.png" afterPathEscaped="$PROJECT_DIR$/UClass/Assets.xcassets/􀍕.imageset/􀍕.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UClass/Assets.xcassets/.imageset/@2x.png" afterPathEscaped="$PROJECT_DIR$/UClass/Assets.xcassets/􀍕.imageset/􀍕@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UClass/Assets.xcassets/.imageset/@3x.png" afterPathEscaped="$PROJECT_DIR$/UClass/Assets.xcassets/􀍕.imageset/􀍕@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UClass/Assets.xcassets/.imageset/Contents.json" afterPathEscaped="$PROJECT_DIR$/UClass/Assets.xcassets/􀎠.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UClass/Assets.xcassets/.imageset/.png" afterPathEscaped="$PROJECT_DIR$/UClass/Assets.xcassets/􀎠.imageset/􀎠.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UClass/Assets.xcassets/.imageset/@2x.png" afterPathEscaped="$PROJECT_DIR$/UClass/Assets.xcassets/􀎠.imageset/􀎠@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UClass/Assets.xcassets/.imageset/@3x.png" afterPathEscaped="$PROJECT_DIR$/UClass/Assets.xcassets/􀎠.imageset/􀎠@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UClass/ForgotPassword.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UClass/UClass.entitlements" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UClass.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/UClass.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UClass/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/UClass/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UClass/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/UClass/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UClass/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/UClass/ViewController.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589803428941</updated>
       <workItem from="1589803434068" duration="105000" />
-      <workItem from="1589958780747" duration="130000" />
+      <workItem from="1589958780747" duration="605000" />
     </task>
     <servers />
   </component>

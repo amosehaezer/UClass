@@ -14,6 +14,9 @@ class TeacherAddTopicViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var descriptionUIView: UIView!
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    @IBOutlet weak var doneButton: UIButton!
+    
+    
     @IBOutlet weak var boldButtonOutlet: UIButton!
     @IBOutlet weak var italicButtonOutlet: UIButton!
     @IBOutlet weak var underlineButtonOutlet: UIButton!
@@ -69,14 +72,8 @@ class TeacherAddTopicViewController: UIViewController, UINavigationControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        descriptionTextView.layer.borderWidth = 1
-        descriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
-        
-        descriptionUIView.layer.borderWidth = 1
-//        descriptionUIView.layer.cornerRadius = 10
-        descriptionUIView.layer.borderColor = UIColor.lightGray.cgColor
-        
         // Do any additional setup after loading the view.
+        initialConfiguration()
     }
     
     
@@ -102,4 +99,15 @@ class TeacherAddTopicViewController: UIViewController, UINavigationControllerDel
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    func initialConfiguration() {
+//        descriptionTextView.layer.borderWidth = 1
+//        descriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
+        
+        descriptionUIView.layer.borderWidth = 1
+        descriptionUIView.layer.cornerRadius = 10
+        descriptionUIView.layer.borderColor = UIColor.lightGray.cgColor
+        
+        doneButton.layer.cornerRadius = 15
+    }
 }
