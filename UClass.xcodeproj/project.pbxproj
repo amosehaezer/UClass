@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C7EC45C27C50289C80CCA76 /* Pods_UClass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F12D7C559D55ED36A4CDDF4 /* Pods_UClass.framework */; };
 		EE2499BE2473D2C800DBB3CD /* SF-Pro-Text-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEAFA1E42472984B0062CEF1 /* SF-Pro-Text-Black.otf */; };
 		EE2499BF2473D2C800DBB3CD /* SF-Pro-Text-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEAFA1E92472984B0062CEF1 /* SF-Pro-Text-BlackItalic.otf */; };
 		EE2499C02473D2C800DBB3CD /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEAFA1E72472984B0062CEF1 /* SF-Pro-Text-Bold.otf */; };
@@ -33,6 +34,9 @@
 		F0025490247D8A3300530A7C /* AssignmentHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F002548E247D8A3300530A7C /* AssignmentHomeCell.xib */; };
 		F0025493247D8A4800530A7C /* ClassSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0025491247D8A4800530A7C /* ClassSection.swift */; };
 		F0025494247D8A4800530A7C /* ClassSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0025492247D8A4800530A7C /* ClassSection.xib */; };
+		F00DEE7A247D93ED00722C77 /* StudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DEE78247D93ED00722C77 /* StudentViewCell.swift */; };
+		F00DEE7B247D93ED00722C77 /* StudentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00DEE79247D93ED00722C77 /* StudentViewCell.xib */; };
+		F00DEE7D247D941500722C77 /* StudentViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DEE7C247D941500722C77 /* StudentViewVC.swift */; };
 		F0406E54247D1287002CD614 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0406E52247D1287002CD614 /* NotificationCell.swift */; };
 		F0406E55247D1287002CD614 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0406E53247D1287002CD614 /* NotificationCell.xib */; };
 		F0406E57247D12B2002CD614 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0406E56247D12B2002CD614 /* NotificationVC.swift */; };
@@ -44,6 +48,7 @@
 		F05E4343247BE77D00162C84 /* RepliesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E4341247BE77D00162C84 /* RepliesCell.xib */; };
 		F0606370247BE8590096BA71 /* DiscussionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060636E247BE8590096BA71 /* DiscussionHeaderView.swift */; };
 		F0606371247BE8590096BA71 /* DiscussionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F060636F247BE8590096BA71 /* DiscussionHeaderView.xib */; };
+		F083ECD0247D906000C146F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F083ECCF247D906000C146F1 /* GoogleService-Info.plist */; };
 		F0A8E55C247C092300E5BE26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A8E55B247C092300E5BE26 /* LoginViewController.swift */; };
 		F0B03B2E247D057C00DCBB15 /* TeacherAddTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B03B2D247D057C00DCBB15 /* TeacherAddTopicViewController.swift */; };
 		F0DD22A8247BE91F0052088C /* DiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD22A7247BE91F0052088C /* DiscussionVC.swift */; };
@@ -58,7 +63,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430C968171EAB6263F359913 /* Pods-UClass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UClass.debug.xcconfig"; path = "Target Support Files/Pods-UClass/Pods-UClass.debug.xcconfig"; sourceTree = "<group>"; };
 		517A7CD52473DDE500367FB3 /* LatoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatoLabel.swift; sourceTree = "<group>"; };
+		9F12D7C559D55ED36A4CDDF4 /* Pods_UClass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UClass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE33DB4D247C0CAC008B5242 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		EE33DB4F247C0CAC008B5242 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		EE33DB50247C0CAC008B5242 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +92,9 @@
 		F002548E247D8A3300530A7C /* AssignmentHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignmentHomeCell.xib; sourceTree = "<group>"; };
 		F0025491247D8A4800530A7C /* ClassSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSection.swift; sourceTree = "<group>"; };
 		F0025492247D8A4800530A7C /* ClassSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassSection.xib; sourceTree = "<group>"; };
+		F00DEE78247D93ED00722C77 /* StudentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewCell.swift; sourceTree = "<group>"; };
+		F00DEE79247D93ED00722C77 /* StudentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentViewCell.xib; sourceTree = "<group>"; };
+		F00DEE7C247D941500722C77 /* StudentViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewVC.swift; sourceTree = "<group>"; };
 		F0406E52247D1287002CD614 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		F0406E53247D1287002CD614 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		F0406E56247D12B2002CD614 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
@@ -96,6 +106,7 @@
 		F05E4341247BE77D00162C84 /* RepliesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepliesCell.xib; sourceTree = "<group>"; };
 		F060636E247BE8590096BA71 /* DiscussionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionHeaderView.swift; sourceTree = "<group>"; };
 		F060636F247BE8590096BA71 /* DiscussionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscussionHeaderView.xib; sourceTree = "<group>"; };
+		F083ECCF247D906000C146F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F08FAD902473D4D500CEBCFB /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
 		F08FAD912473D4D500CEBCFB /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		F08FAD922473D4D500CEBCFB /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
@@ -121,6 +132,7 @@
 		F0FB2C42246A9C1000CAE4A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0FB2C45246A9C1000CAE4A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0FB2C47246A9C1000CAE4A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3965011F384C175371DF37 /* Pods-UClass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UClass.release.xcconfig"; path = "Target Support Files/Pods-UClass/Pods-UClass.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,12 +140,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7EC45C27C50289C80CCA76 /* Pods_UClass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B9E298031E90CA87C4A0DEB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				430C968171EAB6263F359913 /* Pods-UClass.debug.xcconfig */,
+				FA3965011F384C175371DF37 /* Pods-UClass.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EEAFA1CB247297B70062CEF1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +210,7 @@
 		F04BBB07247BEA1300806000 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0AED2ED247D94C200D19366 /* EditStudent */,
 				F0690665247D8DD000AF74A3 /* Dashboard */,
 				F0F7FE08247D06D200BFB2FE /* Discussion */,
 				F0FB2C3A246A9C0F00CAE4A2 /* ViewController.swift */,
@@ -244,10 +267,21 @@
 			path = ../../../../../Downloads/Lato;
 			sourceTree = "<group>";
 		};
+		F0AED2ED247D94C200D19366 /* EditStudent */ = {
+			isa = PBXGroup;
+			children = (
+				F00DEE78247D93ED00722C77 /* StudentViewCell.swift */,
+				F00DEE79247D93ED00722C77 /* StudentViewCell.xib */,
+				F00DEE7C247D941500722C77 /* StudentViewVC.swift */,
+			);
+			path = EditStudent;
+			sourceTree = "<group>";
+		};
 		F0E8E92C2473C53F00B0C339 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F0E8E92D2473C53F00B0C339 /* CloudKit.framework */,
+				9F12D7C559D55ED36A4CDDF4 /* Pods_UClass.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -270,6 +304,7 @@
 				F0FB2C35246A9C0F00CAE4A2 /* UClass */,
 				F0FB2C34246A9C0F00CAE4A2 /* Products */,
 				F0E8E92C2473C53F00B0C339 /* Frameworks */,
+				B9E298031E90CA87C4A0DEB6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,6 +331,7 @@
 				F0FB2C44246A9C1000CAE4A2 /* LaunchScreen.storyboard */,
 				F0FB2C47246A9C1000CAE4A2 /* Info.plist */,
 				F0FB2C3F246A9C0F00CAE4A2 /* UClass.xcdatamodeld */,
+				F083ECCF247D906000C146F1 /* GoogleService-Info.plist */,
 			);
 			path = UClass;
 			sourceTree = "<group>";
@@ -307,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0FB2C4A246A9C1000CAE4A2 /* Build configuration list for PBXNativeTarget "UClass" */;
 			buildPhases = (
+				AAE464D25C7BC5436AE55FEE /* [CP] Check Pods Manifest.lock */,
 				F0FB2C2F246A9C0F00CAE4A2 /* Sources */,
 				F0FB2C30246A9C0F00CAE4A2 /* Frameworks */,
 				F0FB2C31246A9C0F00CAE4A2 /* Resources */,
+				62EB153E6E703D5BF7082E36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,7 +406,9 @@
 				EE2499CC2473D2C800DBB3CD /* SF-Pro-Text-Thin.otf in Resources */,
 				F0606371247BE8590096BA71 /* DiscussionHeaderView.xib in Resources */,
 				EE2499C42473D2C800DBB3CD /* SF-Pro-Text-Light.otf in Resources */,
+				F00DEE7B247D93ED00722C77 /* StudentViewCell.xib in Resources */,
 				EE2499C62473D2C800DBB3CD /* SF-Pro-Text-Medium.otf in Resources */,
+				F083ECD0247D906000C146F1 /* GoogleService-Info.plist in Resources */,
 				EE2499CD2473D2C800DBB3CD /* SF-Pro-Text-ThinItalic.otf in Resources */,
 				EE2499C32473D2C800DBB3CD /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				EE2499CF2473D2C800DBB3CD /* SF-Pro-Text-UltralightItalic.otf in Resources */,
@@ -389,6 +429,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		62EB153E6E703D5BF7082E36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UClass/Pods-UClass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UClass/Pods-UClass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UClass/Pods-UClass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAE464D25C7BC5436AE55FEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UClass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0FB2C2F246A9C0F00CAE4A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -403,9 +485,11 @@
 				F0406E57247D12B2002CD614 /* NotificationVC.swift in Sources */,
 				F002548F247D8A3300530A7C /* AssignmentHomeCell.swift in Sources */,
 				F05E4342247BE77D00162C84 /* RepliesCell.swift in Sources */,
+				F00DEE7D247D941500722C77 /* StudentViewVC.swift in Sources */,
 				F0F7FE07247D067B00BFB2FE /* LatoLabel.swift in Sources */,
 				F0576D8E247C1F1300F8D313 /* ProfilViewController.swift in Sources */,
 				F0A8E55C247C092300E5BE26 /* LoginViewController.swift in Sources */,
+				F00DEE7A247D93ED00722C77 /* StudentViewCell.swift in Sources */,
 				F0606370247BE8590096BA71 /* DiscussionHeaderView.swift in Sources */,
 				F0406E54247D1287002CD614 /* NotificationCell.swift in Sources */,
 				F0B03B2E247D057C00DCBB15 /* TeacherAddTopicViewController.swift in Sources */,
@@ -557,6 +641,7 @@
 		};
 		F0FB2C4B246A9C1000CAE4A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 430C968171EAB6263F359913 /* Pods-UClass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UClass/UClass.entitlements;
@@ -576,6 +661,7 @@
 		};
 		F0FB2C4C246A9C1000CAE4A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA3965011F384C175371DF37 /* Pods-UClass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = UClass/UClass.entitlements;
