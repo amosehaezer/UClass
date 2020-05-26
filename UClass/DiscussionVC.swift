@@ -50,8 +50,8 @@ class DiscussionVC: UIViewController {
         self.discussionsTableView.dataSource = self
         self.discussionsTableView.delegate = self
         setupTableView()
-//        discussionsTableView.rowHeight = UITableView.automaticDimension
-//        discussionsTableView.estimatedRowHeight = 600
+        discussionsTableView.rowHeight = UITableView.automaticDimension
+        discussionsTableView.estimatedRowHeight = 600
         //discussionsTableView.layer.cornerRadius = 20
         discussionsTableView.sectionHeaderHeight = UITableView.automaticDimension
         discussionsTableView.estimatedSectionHeaderHeight = 600
