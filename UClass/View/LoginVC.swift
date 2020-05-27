@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class LoginVC: UIViewController {
 
@@ -25,39 +26,39 @@ class LoginVC: UIViewController {
             print(error.localizedDescription)
         }
         
-//        Auth.auth().createUser(withEmail: "teacher@teacher.com", password: "user123") { (result, error) in
-//            if let e = error {
-//                print(e.localizedDescription)
-//                return
-//            }
-//
-//            guard let uid = result?.user.uid else {return}
-//
-//            let role = 1
-//
-//            var data: [String:Any]
-//
-//            if role == 1 {
-//                data = [
-//                    "name" : "user",
-//                    "email" : "user@user.com",
-//                    "uid" : uid,
-//                    "role" : role,
-//                    "students" : [String]()
-//                ]
-//            } else {
-//                data = [
-//                    "name" : "user",
-//                    "email" : "user@user.com",
-//                    "uid" : uid,
-//                    "role" : role,
-//                ]
-//            }
-//
-//            Services.shared.addUser(userData: data) {
-//                print("DEBUG : Success add new user!")
-//            }
-//        }
+        Auth.auth().createUser(withEmail: "student@mail.com", password: "student") { (result, error) in
+            if let e = error {
+                print(e.localizedDescription)
+                return
+            }
+
+            guard let uid = result?.user.uid else {return}
+
+            let role = 0
+
+            var data: [String:Any]
+
+            if role == 1 {
+                data = [
+                    "name" : "user",
+                    "email" : "user@user.com",
+                    "uid" : uid,
+                    "role" : role,
+                    "courses" : [String]()
+                ]
+            } else {
+                data = [
+                    "name" : "user",
+                    "email" : "user@user.com",
+                    "uid" : uid,
+                    "role" : role,
+                ]
+            }
+
+            Services.shared.addUser(userData: data) {
+                print("DEBUG : Success add new user!")
+            }
+        }
         
     }
     

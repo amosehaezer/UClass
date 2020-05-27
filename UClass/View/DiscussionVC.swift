@@ -63,6 +63,7 @@ class DiscussionVC: UIViewController {
     
     func setupTableView() {
         discussionsTableView.register(UINib(nibName: "RepliesCell", bundle: nil), forCellReuseIdentifier: "repliesCell")
+        discussionsTableView.register(UINib(nibName: "AddReplyCell", bundle: nil), forCellReuseIdentifier: "addReply")
 
     }
     
@@ -86,7 +87,7 @@ class DiscussionVC: UIViewController {
 
         var indexPaths = [IndexPath]()
         if testList[section].replies.count > 0{
-            for a in 0...(testList[section].replies.count-1){
+            for a in 0...(testList[section].replies.count){
                 let indexPath = IndexPath(row: a, section: section)
                 indexPaths.append(indexPath)
             }
@@ -221,7 +222,7 @@ extension DiscussionVC: UITableViewDataSource {
         {
             return 0
         }
-        return testList[section].replies.count
+        return testList[section].replies.count + 1
     }
     
     
@@ -229,57 +230,48 @@ extension DiscussionVC: UITableViewDataSource {
         
         let section = indexPath.section
         let row = indexPath.row
-//        switch indexPath.row{
-//        case 0:
-//            if let cell = discussionsTableView.dequeueReusableCell(withIdentifier: "discussionCell") as? DiscussionCell{
-//                cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height/2
-//                cell.discussionView.layer.cornerRadius = 20
-//                cell.layer.cornerRadius = 20
-//                return cell
-//            } else {
-//                return DiscussionCell()
-//            }
-//        case 1:
-//            if let cell = discussionsTableView.dequeueReusableCell(withIdentifier: "testCell"
-//                ) as? TestCell {
-//                cell.layer.cornerRadius = 20
-//                return cell
-//            } else {
-//                return TestCell()
-//            }
-//
-//        default:
-//            return UITableViewCell()
-//        }
-        if let cell = discussionsTableView.dequeueReusableCell(withIdentifier: "repliesCell") as? RepliesCell {
-            cell.profileImage.image = testList[section].replies[row].profile
-            cell.datePostLabel.text = testList[section].replies[row].datePost
-            cell.profileName.text = testList[section].replies[row].name
-            
-            cell.likeCount.text = "\(testList[section].replies[row].like)"
-            cell.dislikeCount.text = "\(testList[section].replies[row].dislike)"
-            cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height/2
-            cell.replyLabel.text = testList[section].replies[row].replyContent
-            cell.likeButton.tag = section*10000 + row
-            cell.dislikeButton.tag = section*10000 + row
-            cell.likeButton.addTarget(self, action: #selector(likedReply), for: .touchUpInside)
-            cell.dislikeButton.addTarget(self, action: #selector(dislikedReply), for: .touchUpInside)
-            
-            if testList[section].replies[row].isLiked {
-                cell.likeButton.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
-                cell.dislikeButton.setImage(UIImage(systemName: "hand.thumbsdown"), for: .normal)
-            } else if testList[section].replies[row].isDisliked{
-                cell.dislikeButton.setImage(UIImage(systemName: "hand.thumbsdown.fill"), for: .normal)
-                cell.likeButton.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
-            }
-            
-            
-                       
-            return cell
         
-        } else {
-            return RepliesCell()
+        switch row{
+        case testList[section].replies.count:
+            if let cell = discussionsTableView.dequeueReusableCell(withIdentifier: "addReply") as? AddReplyCell{
+                cell.containerView.layer.cornerRadius = 20
+                return cell
+            } else{
+                return AddReplyCell()
+            }
+        default :
+            if let cell = discussionsTableView.dequeueReusableCell(withIdentifier: "repliesCell") as? RepliesCell {
+                cell.profileImage.image = testList[section].replies[row].profile
+                cell.datePostLabel.text = testList[section].replies[row].datePost
+                cell.profileName.text = testList[section].replies[row].name
+                
+                cell.likeCount.text = "\(testList[section].replies[row].like)"
+                cell.dislikeCount.text = "\(testList[section].replies[row].dislike)"
+                cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height/2
+                cell.replyLabel.text = testList[section].replies[row].replyContent
+                cell.likeButton.tag = section*10000 + row
+                cell.dislikeButton.tag = section*10000 + row
+                cell.likeButton.addTarget(self, action: #selector(likedReply), for: .touchUpInside)
+                cell.dislikeButton.addTarget(self, action: #selector(dislikedReply), for: .touchUpInside)
+                
+                if testList[section].replies[row].isLiked {
+                    cell.likeButton.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
+                    cell.dislikeButton.setImage(UIImage(systemName: "hand.thumbsdown"), for: .normal)
+                } else if testList[section].replies[row].isDisliked{
+                    cell.dislikeButton.setImage(UIImage(systemName: "hand.thumbsdown.fill"), for: .normal)
+                    cell.likeButton.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
+                }
+                
+                
+                           
+                return cell
+            
+            } else {
+                return RepliesCell()
+            }
         }
+
+
     }
 }
 

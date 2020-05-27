@@ -8,6 +8,8 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 let DB_REF = Firestore.firestore()
 let USER_REF = DB_REF.collection("users")
@@ -27,6 +29,37 @@ struct Services {
             completion()
         }
     }
+    func addCourse(courseData: [String:Any], completion: @escaping() -> Void) {
+        COURSE_REF.addDocument(data: courseData) { (error) in
+            if let e = error {
+                print(e.localizedDescription)
+                return
+            }
+            completion()
+        }
+    }
+    
+    func addDiscussion(discussionData: [String:Any], completion: @escaping() -> Void) {
+        DISCUSSION_REF.addDocument(data: discussionData) { (error) in
+            if let e = error {
+                print(e.localizedDescription)
+                return
+            }
+            completion()
+        }
+    }
+    
+    func addComment(commentData: [String:Any], completion: @escaping() -> Void) {
+        COMMENT_REF.addDocument(data: commentData) { (error) in
+            if let e = error {
+                print(e.localizedDescription)
+                return
+            }
+            completion()
+        }
+    }
+    
+    
     func login(email: String, pass: String) -> Int {
         var temp: Int = 0
         Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in

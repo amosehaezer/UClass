@@ -32,6 +32,10 @@ class InsideTopicVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+        
+        
+        self.navigationController?.navigationBar.isHidden = false
+    
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self

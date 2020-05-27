@@ -67,6 +67,7 @@ class HomeVC: UIViewController, AddClassData {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         
         let nonLetters  = CharacterSet.letters.inverted
         let name = (testUser.name.components(separatedBy: nonLetters).first)!
@@ -108,6 +109,10 @@ class HomeVC: UIViewController, AddClassData {
             }
         }
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -219,13 +224,28 @@ extension HomeVC: UITableViewDataSource {
         else { return AssignmentHomeCell() }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "insideTopic", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let addvc = segue.destination as! AddClassVC
-        addvc.className = self.className
-        addvc.classSubject = self.classSubject
-        addvc.studentsEmail = self.studentsEmail
-        addvc.delegate = self
-        addvc.instaceHVC = self
+        if segue.identifier == "insideTopic" {
+            let it = segue.destination as! InsideTopicVC
+        } else if segue.identifier == "toAddClass" {
+            let c = segue.destination as! AddClassVC
+            c.className = self.className
+            c.classSubject = self.classSubject
+            c.studentsEmail = self.studentsEmail
+            c.delegate = self
+            c.instaceHVC = self
+        }
+        
+//        let addvc = segue.destination as! AddClassVC
+//        addvc.className = self.className
+//        addvc.classSubject = self.classSubject
+//        addvc.studentsEmail = self.studentsEmail
+//        addvc.delegate = self
+//        addvc.instaceHVC = self
     }
 }
 
