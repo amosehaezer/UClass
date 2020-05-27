@@ -42,7 +42,7 @@ class AddClassVC: UIViewController {
         
         instaceHVC.tableView.reloadData()
         
-        dismiss(animated: true, completion: nil)
+        self.navigationController!.popToRootViewController(animated: true)
     }
     
     
