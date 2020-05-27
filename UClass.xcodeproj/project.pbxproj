@@ -29,6 +29,7 @@
 		EE33DB51247C0CAC008B5242 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33DB4D247C0CAC008B5242 /* OTPViewController.swift */; };
 		EE33DB52247C0CAC008B5242 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33DB4F247C0CAC008B5242 /* ForgotPasswordViewController.swift */; };
 		EE33DB53247C0CAC008B5242 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33DB50247C0CAC008B5242 /* ResetPasswordViewController.swift */; };
+		EE33DB5B247E5301008B5242 /* AddClassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33DB5A247E5301008B5242 /* AddClassVC.swift */; };
 		F002548C247D89E600530A7C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002548B247D89E600530A7C /* HomeVC.swift */; };
 		F002548F247D8A3300530A7C /* AssignmentHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F002548D247D8A3300530A7C /* AssignmentHomeCell.swift */; };
 		F0025490247D8A3300530A7C /* AssignmentHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F002548E247D8A3300530A7C /* AssignmentHomeCell.xib */; };
@@ -70,6 +71,7 @@
 		EE33DB4D247C0CAC008B5242 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		EE33DB4F247C0CAC008B5242 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		EE33DB50247C0CAC008B5242 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		EE33DB5A247E5301008B5242 /* AddClassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassVC.swift; sourceTree = "<group>"; };
 		EEAFA1E12472984B0062CEF1 /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
 		EEAFA1E22472984B0062CEF1 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
 		EEAFA1E32472984B0062CEF1 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				EE33DB4F247C0CAC008B5242 /* ForgotPasswordViewController.swift */,
 				EE33DB50247C0CAC008B5242 /* ResetPasswordViewController.swift */,
 				EE33DB4D247C0CAC008B5242 /* OTPViewController.swift */,
+				EE33DB5A247E5301008B5242 /* AddClassVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				F0406E54247D1287002CD614 /* NotificationCell.swift in Sources */,
 				F0B03B2E247D057C00DCBB15 /* TeacherAddTopicViewController.swift in Sources */,
 				EE33DB52247C0CAC008B5242 /* ForgotPasswordViewController.swift in Sources */,
+				EE33DB5B247E5301008B5242 /* AddClassVC.swift in Sources */,
 				F0FB2C41246A9C0F00CAE4A2 /* UClass.xcdatamodeld in Sources */,
 				F002548C247D89E600530A7C /* HomeVC.swift in Sources */,
 				F0576D88247C1E7F00F8D313 /* CustomView.swift in Sources */,

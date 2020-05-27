@@ -72,23 +72,9 @@ class TeacherAddTopicViewController: UIViewController, UINavigationControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         initialConfiguration()
     }
     
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
@@ -101,8 +87,6 @@ class TeacherAddTopicViewController: UIViewController, UINavigationControllerDel
     
     
     func initialConfiguration() {
-//        descriptionTextView.layer.borderWidth = 1
-//        descriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
         
         descriptionUIView.layer.borderWidth = 1
         descriptionUIView.layer.cornerRadius = 10
