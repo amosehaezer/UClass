@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeacherAddTopicViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+class TeacherAddTopicVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionUIView: UIView!

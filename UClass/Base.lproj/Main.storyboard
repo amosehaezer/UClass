@@ -107,7 +107,7 @@
         <!--Login-->
         <scene sceneID="Qd5-Sb-Nnz">
             <objects>
-                <viewController title="Login" id="WEp-4q-LvP" customClass="LoginViewController" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="WEp-4q-LvP" customClass="LoginVC" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x2C-aK-F1k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -538,10 +538,10 @@
             </objects>
             <point key="canvasLocation" x="1445" y="834"/>
         </scene>
-        <!--Teacher Add Topic View Controller-->
+        <!--Teacher Add TopicVC-->
         <scene sceneID="nH1-fU-l8j">
             <objects>
-                <viewController id="iNy-42-RMR" customClass="TeacherAddTopicViewController" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iNy-42-RMR" customClass="TeacherAddTopicVC" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SHb-V4-a26">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

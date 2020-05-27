@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SignInVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
  
 
     
