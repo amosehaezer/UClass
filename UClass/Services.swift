@@ -27,7 +27,7 @@ struct Services {
             completion()
         }
     }
-    func login(email: String, pass: String) -> Bool {
+    func login(email: String, pass: String) -> Int {
         var temp: Int = 0
         Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
             if error == nil {
@@ -38,13 +38,14 @@ struct Services {
                 let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(defaultAction)
 //                self.check(as: true)
+                temp = 200
 //              self.present(alertController, animated: true, completion: nil)
             } else {
 //                self.check(as: false)
 //                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
 //                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
 //                alertController.addAction(defaultAction)
-//                temp = 0
+                temp = 0
 //                print(user)
 //              self.present(alertController, animated: true, completion: nil)
             }
@@ -54,15 +55,6 @@ struct Services {
 //        alertController.addAction(defaultAction)
 //        temp = 0
 //        print(user)
-        return false
+        return temp
     }
-    
-//    func check(as: Bool) -> Bool {
-//        var x = false
-//        if var as == false {
-//            return false
-//        } else {
-//            return true
-//        }
-//    }
 }

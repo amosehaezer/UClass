@@ -52,6 +52,11 @@
 		F083ECD0247D906000C146F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F083ECCF247D906000C146F1 /* GoogleService-Info.plist */; };
 		F0A29670247E0C010000DEFB /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A2966F247E0C010000DEFB /* Services.swift */; };
 		F0A8E55C247C092300E5BE26 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A8E55B247C092300E5BE26 /* LoginVC.swift */; };
+		F0AE90AF247EA632002774E7 /* InsideTopicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE90AE247EA632002774E7 /* InsideTopicVC.swift */; };
+		F0AE90B2247EA67E002774E7 /* InsideTopicSeeAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE90B0247EA67E002774E7 /* InsideTopicSeeAll.swift */; };
+		F0AE90B3247EA67E002774E7 /* InsideTopicSeeAll.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AE90B1247EA67E002774E7 /* InsideTopicSeeAll.xib */; };
+		F0AE90BF247EA999002774E7 /* AssignmentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE90BD247EA999002774E7 /* AssignmentHeaderView.swift */; };
+		F0AE90C0247EA999002774E7 /* AssignmentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AE90BE247EA999002774E7 /* AssignmentHeaderView.xib */; };
 		F0B03B2E247D057C00DCBB15 /* TeacherAddTopicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B03B2D247D057C00DCBB15 /* TeacherAddTopicVC.swift */; };
 		F0DD22A8247BE91F0052088C /* DiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD22A7247BE91F0052088C /* DiscussionVC.swift */; };
 		F0F7FE07247D067B00BFB2FE /* LatoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A7CD52473DDE500367FB3 /* LatoLabel.swift */; };
@@ -123,6 +128,11 @@
 		F08FAD9A2473D4D500CEBCFB /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		F0A2966F247E0C010000DEFB /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		F0A8E55B247C092300E5BE26 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F0AE90AE247EA632002774E7 /* InsideTopicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideTopicVC.swift; sourceTree = "<group>"; };
+		F0AE90B0247EA67E002774E7 /* InsideTopicSeeAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideTopicSeeAll.swift; sourceTree = "<group>"; };
+		F0AE90B1247EA67E002774E7 /* InsideTopicSeeAll.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsideTopicSeeAll.xib; sourceTree = "<group>"; };
+		F0AE90BD247EA999002774E7 /* AssignmentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentHeaderView.swift; sourceTree = "<group>"; };
+		F0AE90BE247EA999002774E7 /* AssignmentHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignmentHeaderView.xib; sourceTree = "<group>"; };
 		F0B03B2D247D057C00DCBB15 /* TeacherAddTopicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAddTopicVC.swift; sourceTree = "<group>"; };
 		F0DD22A7247BE91F0052088C /* DiscussionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionVC.swift; sourceTree = "<group>"; };
 		F0E8E92B2473C53900B0C339 /* UClass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UClass.entitlements; sourceTree = "<group>"; };
@@ -215,6 +225,8 @@
 		F04BBB07247BEA1300806000 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0AE90B4247EA73A002774E7 /* Assignment */,
+				F0AE90AD247EA60C002774E7 /* Inside */,
 				F0AED2ED247D94C200D19366 /* EditStudent */,
 				F0690665247D8DD000AF74A3 /* Dashboard */,
 				F0F7FE08247D06D200BFB2FE /* Discussion */,
@@ -249,6 +261,8 @@
 				F002548B247D89E600530A7C /* HomeVC.swift */,
 				F002548D247D8A3300530A7C /* AssignmentHomeCell.swift */,
 				F002548E247D8A3300530A7C /* AssignmentHomeCell.xib */,
+				F0AE90BE247EA999002774E7 /* AssignmentHeaderView.xib */,
+				F0AE90BD247EA999002774E7 /* AssignmentHeaderView.swift */,
 				F0025491247D8A4800530A7C /* ClassSection.swift */,
 				F0025492247D8A4800530A7C /* ClassSection.xib */,
 			);
@@ -272,6 +286,23 @@
 			);
 			name = Lato;
 			path = ../../../../../Downloads/Lato;
+			sourceTree = "<group>";
+		};
+		F0AE90AD247EA60C002774E7 /* Inside */ = {
+			isa = PBXGroup;
+			children = (
+				F0AE90AE247EA632002774E7 /* InsideTopicVC.swift */,
+				F0AE90B0247EA67E002774E7 /* InsideTopicSeeAll.swift */,
+				F0AE90B1247EA67E002774E7 /* InsideTopicSeeAll.xib */,
+			);
+			path = Inside;
+			sourceTree = "<group>";
+		};
+		F0AE90B4247EA73A002774E7 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assignment;
 			sourceTree = "<group>";
 		};
 		F0AED2ED247D94C200D19366 /* EditStudent */ = {
@@ -416,6 +447,7 @@
 				EE2499C62473D2C800DBB3CD /* SF-Pro-Text-Medium.otf in Resources */,
 				F083ECD0247D906000C146F1 /* GoogleService-Info.plist in Resources */,
 				EE2499CD2473D2C800DBB3CD /* SF-Pro-Text-ThinItalic.otf in Resources */,
+				F0AE90C0247EA999002774E7 /* AssignmentHeaderView.xib in Resources */,
 				EE2499C32473D2C800DBB3CD /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				EE2499CF2473D2C800DBB3CD /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 				F0025494247D8A4800530A7C /* ClassSection.xib in Resources */,
@@ -425,6 +457,7 @@
 				EE2499CA2473D2C800DBB3CD /* SF-Pro-Text-Semibold.otf in Resources */,
 				EE2499CB2473D2C800DBB3CD /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
 				F0FB2C3E246A9C0F00CAE4A2 /* Main.storyboard in Resources */,
+				F0AE90B3247EA67E002774E7 /* InsideTopicSeeAll.xib in Resources */,
 				F0406E55247D1287002CD614 /* NotificationCell.xib in Resources */,
 				EE2499C22473D2C800DBB3CD /* SF-Pro-Text-Heavy.otf in Resources */,
 				F0025490247D8A3300530A7C /* AssignmentHomeCell.xib in Resources */,
@@ -489,6 +522,7 @@
 				F0025493247D8A4800530A7C /* ClassSection.swift in Sources */,
 				F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */,
 				F0406E57247D12B2002CD614 /* NotificationVC.swift in Sources */,
+				F0AE90B2247EA67E002774E7 /* InsideTopicSeeAll.swift in Sources */,
 				F002548F247D8A3300530A7C /* AssignmentHomeCell.swift in Sources */,
 				F05E4342247BE77D00162C84 /* RepliesCell.swift in Sources */,
 				F00DEE7D247D941500722C77 /* StudentViewVC.swift in Sources */,
@@ -497,11 +531,13 @@
 				F0576D8E247C1F1300F8D313 /* ProfilVC.swift in Sources */,
 				F0A8E55C247C092300E5BE26 /* LoginVC.swift in Sources */,
 				F00DEE7A247D93ED00722C77 /* StudentViewCell.swift in Sources */,
+				F0AE90BF247EA999002774E7 /* AssignmentHeaderView.swift in Sources */,
 				F0606370247BE8590096BA71 /* DiscussionHeaderView.swift in Sources */,
 				F0406E54247D1287002CD614 /* NotificationCell.swift in Sources */,
 				F0B03B2E247D057C00DCBB15 /* TeacherAddTopicVC.swift in Sources */,
 				EE33DB52247C0CAC008B5242 /* ForgotPasswordViewController.swift in Sources */,
 				EE33DB5B247E5301008B5242 /* AddClassVC.swift in Sources */,
+				F0AE90AF247EA632002774E7 /* InsideTopicVC.swift in Sources */,
 				F0FB2C41246A9C0F00CAE4A2 /* UClass.xcdatamodeld in Sources */,
 				F002548C247D89E600530A7C /* HomeVC.swift in Sources */,
 				F0576D88247C1E7F00F8D313 /* CustomView.swift in Sources */,

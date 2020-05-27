@@ -62,26 +62,51 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginBtn(_ sender: Any) {
-        if emailTextfield.text == "" || passwordTextfield.text == "" {
+//        if emailTextfield.text == "" || passwordTextfield.text == "" {
+//            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
+//            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//            alertController.addAction(defaultAction)
+//            self.present(alertController, animated: true, completion: nil)
+//        } else {
+//            var log = loginManager.login(email: emailTextfield.text!, pass: passwordTextfield.text!)
+//            print(log)
+//            if log == 200 {
+//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let homeViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! HomeVC
+//                self.present(homeViewController, animated: true, completion: nil)
+//
+//            } else {
+//                let alertController = UIAlertController(title: "Error", message: "Wrong email or password.", preferredStyle: .alert)
+//                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//                alertController.addAction(defaultAction)
+//                self.present(alertController, animated: true, completion: nil)
+//            }
+//        }
+//    }
+        
+        if self.emailTextfield.text == "" || self.passwordTextfield.text == "" {
             let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
         } else {
-            let log = loginManager.login(email: emailTextfield.text!, pass: passwordTextfield.text!)
-            print(log)
-            if log == true {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let homeViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! HomeVC
-                self.present(homeViewController, animated: true, completion: nil)
-                
-            } else {
-                let alertController = UIAlertController(title: "Error", message: "Wrong email or password.", preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
+            Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
+                if error == nil {
+                    print("You have successfully logged in")
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! HomeVC
+                            self.present(newViewController, animated: true, completion: nil)
+//                    let alertController = UIAlertController(title: "Success", message: error?.localizedDescription, preferredStyle: .alert)
+//                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//                    alertController.addAction(defaultAction)
+//                    self.present(alertController, animated: true, completion: nil)
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
         }
     }
-    
 }
