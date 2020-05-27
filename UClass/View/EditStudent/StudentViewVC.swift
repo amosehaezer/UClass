@@ -13,7 +13,7 @@ class StudentViewVC: UIViewController {
     @IBOutlet weak var studentTable: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
     
-    var students = [StudentViewCell()]
+    var students = [StudentViewCell(),StudentViewCell()]
     override func viewDidLoad() {
         super.viewDidLoad()
         self.studentTable.dataSource = self
@@ -37,7 +37,7 @@ class StudentViewVC: UIViewController {
               editButton.tintColor = .systemBlue
         }else{
             editButton.title = "Edit"
-            editButton.tintColor = .systemRed
+            editButton.tintColor = .systemBlue
           
         }
         
@@ -95,15 +95,4 @@ extension StudentViewVC: UITableViewDataSource {
             
 }
 
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 

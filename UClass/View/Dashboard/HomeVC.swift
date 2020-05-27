@@ -35,10 +35,10 @@ struct Assignment {
     var lastDiscussed: String
 }
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, AddClassData {
     
     
-    var testUser = currentUser(role: "student", email: "anitamiles@yahoo.com", name: "Anita Miles", profileImage: "profile-1")
+    var testUser = currentUser(role: "teacher", email: "anitamiles@yahoo.com", name: "Prof. Selena Strange", profileImage: "profile-4")
     
     var subjectList = [
         testSubject(classname: "XII IPA 4", classmember: ["anitamiles@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"], classSubject: "Mathematics", teacher: "Prof. Selena Strange", isExpanded: false, assignments: [Assignment(assignmentName: "Integral", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020"),Assignment(assignmentName: "Integral 2", discussionsCount: 5, lastDiscussed: "Monday, 10 May 2020"),Assignment(assignmentName: "Integral 3", discussionsCount: 12, lastDiscussed: "Wednesday, 12 May 2020"),Assignment(assignmentName: "Turunan 1", discussionsCount: 2, lastDiscussed: "Friday, 14 May 2020")]),
@@ -58,8 +58,16 @@ class HomeVC: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var homeProfileImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    
+    var className: String? = "Josia"
+    var classSubject: String? = "Mannuel"
+    var studentsEmail: [String]? = [""]
+    
+    var templist: [testSubject] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let nonLetters  = CharacterSet.letters.inverted
         let name = (testUser.name.components(separatedBy: nonLetters).first)!
         homeProfileImage.image = UIImage(named: testUser.profileImage)
@@ -76,11 +84,11 @@ class HomeVC: UIViewController {
 
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
-        //discussionsTableView.layer.cornerRadius = 20
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 600
         tableView.register(UINib(nibName: "ClassSection", bundle: nil), forHeaderFooterViewReuseIdentifier: "classSection")
         tableView.register(UINib(nibName: "AssignmentHomeCell", bundle: nil), forCellReuseIdentifier: "assignmentCell")
+        
         if testUser.role == "student"{
             editButton.isHidden = true
             for a in subjectList{
@@ -99,21 +107,51 @@ class HomeVC: UIViewController {
                 }
             }
         }
+        
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
     
-//    @objc func expanded(){
-//
-//
-//
-//
-//    }
+    @IBAction func editClass(_ sender: UIButton) {
+        let actionsheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let deleteClass = UIAlertAction(title: "Delete class", style: .destructive){ action in
+            
+        }
+        
+        let addClass = UIAlertAction(title: "Add Class", style: .default){ action in
+            self.AddClassPage()
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        actionsheet.addAction(addClass)
+        actionsheet.addAction(deleteClass)
+        actionsheet.addAction(cancel)
+        
+        present(actionsheet, animated: true, completion: nil)
+        
+    }
     
-
+    func AddClassPage() {
+        performSegue(withIdentifier: "toAddClass", sender: UIButton.self)
+    }
     
-
+    func sendClassData(className: String, classSubject: String, studentsEmail: [String]) {
+        addClassToList(className: className, classSubject: classSubject, studentsEmail: studentsEmail)
+        tableView.reloadData()
+        print(subjectList)
+    }
+    
+    func addClassToList(className: String, classSubject: String, studentsEmail: [String]){
+        userSubject.append(testSubject(classname: className, classmember: studentsEmail, classSubject: classSubject, teacher: "Prof. Selena Strange", isExpanded: false, assignments: []))
+    }
+    
+    
 }
+
 extension HomeVC: UITableViewDataSource {
     
     @objc func expanded(button: UIButton){
@@ -180,6 +218,15 @@ extension HomeVC: UITableViewDataSource {
         }
         else { return AssignmentHomeCell() }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let addvc = segue.destination as! AddClassVC
+        addvc.className = self.className
+        addvc.classSubject = self.classSubject
+        addvc.studentsEmail = self.studentsEmail
+        addvc.delegate = self
+        addvc.instaceHVC = self
+    }
 }
 
 extension HomeVC: UITableViewDelegate {
@@ -226,7 +273,6 @@ extension HomeVC: UITableViewDelegate {
             }
             view.expandButton.tag = section
             view.expandButton.addTarget(self, action: #selector(expanded), for: .touchUpInside)
-            //view.expandButton.addTarget(self, action: #selector(expanded), for: .touchUpInside)
             return view.contentView
         } else {
             return ClassSection()
