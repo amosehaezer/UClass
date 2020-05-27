@@ -49,6 +49,7 @@
 		F0606370247BE8590096BA71 /* DiscussionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060636E247BE8590096BA71 /* DiscussionHeaderView.swift */; };
 		F0606371247BE8590096BA71 /* DiscussionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F060636F247BE8590096BA71 /* DiscussionHeaderView.xib */; };
 		F083ECD0247D906000C146F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F083ECCF247D906000C146F1 /* GoogleService-Info.plist */; };
+		F0A29670247E0C010000DEFB /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A2966F247E0C010000DEFB /* Services.swift */; };
 		F0A8E55C247C092300E5BE26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A8E55B247C092300E5BE26 /* LoginViewController.swift */; };
 		F0B03B2E247D057C00DCBB15 /* TeacherAddTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B03B2D247D057C00DCBB15 /* TeacherAddTopicViewController.swift */; };
 		F0DD22A8247BE91F0052088C /* DiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD22A7247BE91F0052088C /* DiscussionVC.swift */; };
@@ -118,6 +119,7 @@
 		F08FAD982473D4D500CEBCFB /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F08FAD992473D4D500CEBCFB /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		F08FAD9A2473D4D500CEBCFB /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		F0A2966F247E0C010000DEFB /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		F0A8E55B247C092300E5BE26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F0B03B2D247D057C00DCBB15 /* TeacherAddTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAddTopicViewController.swift; sourceTree = "<group>"; };
 		F0DD22A7247BE91F0052088C /* DiscussionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionVC.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				F0FB2C47246A9C1000CAE4A2 /* Info.plist */,
 				F0FB2C3F246A9C0F00CAE4A2 /* UClass.xcdatamodeld */,
 				F083ECCF247D906000C146F1 /* GoogleService-Info.plist */,
+				F0A2966F247E0C010000DEFB /* Services.swift */,
 			);
 			path = UClass;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				F002548F247D8A3300530A7C /* AssignmentHomeCell.swift in Sources */,
 				F05E4342247BE77D00162C84 /* RepliesCell.swift in Sources */,
 				F00DEE7D247D941500722C77 /* StudentViewVC.swift in Sources */,
+				F0A29670247E0C010000DEFB /* Services.swift in Sources */,
 				F0F7FE07247D067B00BFB2FE /* LatoLabel.swift in Sources */,
 				F0576D8E247C1F1300F8D313 /* ProfilViewController.swift in Sources */,
 				F0A8E55C247C092300E5BE26 /* LoginViewController.swift in Sources */,

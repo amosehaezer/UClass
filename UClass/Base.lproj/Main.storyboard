@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a2v-Q7-b3s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WEp-4q-LvP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-474" y="131"/>
+            <point key="canvasLocation" x="-648" y="84"/>
         </scene>
         <!--Login-->
         <scene sceneID="Qd5-Sb-Nnz">
@@ -87,7 +87,7 @@
                                 <rect key="frame" x="31" y="456" width="352" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cza-WR-YOc">
                                 <rect key="frame" x="31" y="526" width="352" height="40"/>
@@ -96,6 +96,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" name="background"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtn:" destination="WEp-4q-LvP" eventType="touchUpInside" id="140-c7-K8P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3X6-8n-KOw">
                                 <rect key="frame" x="150" y="574" width="115" height="30"/>
@@ -111,16 +114,17 @@
                     </view>
                     <connections>
                         <outlet property="emailTextfield" destination="SHZ-Ot-hBu" id="Du1-0e-i4V"/>
+                        <outlet property="passwordTextfield" destination="Cpk-JI-Sde" id="jGm-Qc-Rtb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53l-0b-yD1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650.72463768115949" y="130.58035714285714"/>
+            <point key="canvasLocation" x="261" y="84"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="S1D-kY-wux">
             <objects>
-                <viewController title="Sign Up" id="Y3K-3y-J0W" sceneMemberID="viewController">
+                <viewController title="Sign Up" modalPresentationStyle="fullScreen" id="Y3K-3y-J0W" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5op-sO-Zzp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,13 +166,13 @@
                                 <rect key="frame" x="31" y="544" width="352" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Gm-Xt-Qhi">
                                 <rect key="frame" x="32" y="490" width="352" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please fill in all the field to sign up." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wk1-G0-Hi5">
                                 <rect key="frame" x="31" y="274" width="352" height="20"/>
@@ -202,10 +206,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="chI-sA-kcj"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hEV-HA-LNG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfo-cW-HpX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444.9275362318842" y="130.58035714285714"/>
+            <point key="canvasLocation" x="1445" y="117"/>
         </scene>
         <!--DiscussionVC-->
         <scene sceneID="ew2-ez-yi4">
@@ -588,7 +593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvm-x5-rcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-152.17391304347828" y="991.74107142857133"/>
+            <point key="canvasLocation" x="-77" y="852"/>
         </scene>
         <!--NotificationVC-->
         <scene sceneID="gne-sb-khb">
@@ -607,18 +612,19 @@
                         <color key="backgroundColor" name="background"/>
                         <viewLayoutGuide key="safeArea" id="jcW-Ts-qze"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XCm-R0-ux3"/>
                     <connections>
                         <outlet property="notificationTable" destination="fRx-JT-lY9" id="oxa-Pq-hMs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOX-ld-Q0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444.9275362318842" y="-586.60714285714278"/>
+            <point key="canvasLocation" x="2264" y="131"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="nsZ-TM-FYf">
             <objects>
-                <viewController id="ObU-5b-cbb" customClass="HomeVC" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dashboard" modalPresentationStyle="fullScreen" id="ObU-5b-cbb" customClass="HomeVC" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QTy-hn-1Zt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -707,6 +713,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FaX-h9-Ebs"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mQf-sI-tDm"/>
                     <connections>
                         <outlet property="editButton" destination="2yt-Tm-knx" id="K4S-WZ-N2j"/>
                         <outlet property="headerView" destination="vZX-Qr-vdr" id="FGD-FB-1S7"/>
