@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WEp-4q-LvP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WEp-4q-LvP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -217,7 +217,7 @@
             </objects>
             <point key="canvasLocation" x="-2068" y="132"/>
         </scene>
-        <!--DiscussionVC-->
+        <!--Discussions-->
         <scene sceneID="ew2-ez-yi4">
             <objects>
                 <viewController id="Mmc-ad-nHs" customClass="DiscussionVC" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
@@ -239,7 +239,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HSY-H7-CmZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Awu-eX-YRe"/>
+                    <navigationItem key="navigationItem" title="Discussions" id="Awu-eX-YRe"/>
                     <connections>
                         <outlet property="discussionsTableView" destination="vIg-yR-Ukj" id="XCF-Tx-hMu"/>
                     </connections>
@@ -854,7 +854,7 @@
             </objects>
             <point key="canvasLocation" x="2762" y="117"/>
         </scene>
-        <!--Inside TopicVC-->
+        <!--Integral-->
         <scene sceneID="r4G-SW-XFK">
             <objects>
                 <viewController storyboardIdentifier="insideTopic" modalPresentationStyle="fullScreen" id="78J-kb-XHi" customClass="InsideTopicVC" customModule="UClass" customModuleProvider="target" sceneMemberID="viewController">
@@ -877,7 +877,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pce-2a-64h"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9ur-43-7JN"/>
+                    <navigationItem key="navigationItem" title="Integral" id="9ur-43-7JN"/>
                     <connections>
                         <outlet property="tableView" destination="J1x-ze-5Qh" id="Pvo-SJ-gX2"/>
                         <segue destination="Mmc-ad-nHs" kind="show" identifier="seeDiscussion" id="dPZ-2T-TE1"/>
