@@ -61,6 +61,8 @@
 		F0DA6A65247EC2D000136947 /* AddReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DA6A63247EC2D000136947 /* AddReplyCell.swift */; };
 		F0DA6A66247EC2D000136947 /* AddReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0DA6A64247EC2D000136947 /* AddReplyCell.xib */; };
 		F0DD22A8247BE91F0052088C /* DiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD22A7247BE91F0052088C /* DiscussionVC.swift */; };
+		F0E0A251247F64D700B00D18 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E0A250247F64D700B00D18 /* SignUpVC.swift */; };
+		F0E0A253247F990200B00D18 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E0A252247F990200B00D18 /* User.swift */; };
 		F0F7FE07247D067B00BFB2FE /* LatoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A7CD52473DDE500367FB3 /* LatoLabel.swift */; };
 		F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB2C36246A9C0F00CAE4A2 /* AppDelegate.swift */; };
 		F0FB2C39246A9C0F00CAE4A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FB2C38246A9C0F00CAE4A2 /* SceneDelegate.swift */; };
@@ -139,6 +141,8 @@
 		F0DA6A63247EC2D000136947 /* AddReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReplyCell.swift; sourceTree = "<group>"; };
 		F0DA6A64247EC2D000136947 /* AddReplyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddReplyCell.xib; sourceTree = "<group>"; };
 		F0DD22A7247BE91F0052088C /* DiscussionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionVC.swift; sourceTree = "<group>"; };
+		F0E0A250247F64D700B00D18 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		F0E0A252247F990200B00D18 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = UClass/View/User.swift; sourceTree = SOURCE_ROOT; };
 		F0E8E92B2473C53900B0C339 /* UClass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UClass.entitlements; sourceTree = "<group>"; };
 		F0E8E92D2473C53F00B0C339 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F0FB2C33246A9C0F00CAE4A2 /* UClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +215,7 @@
 		F04BBB05247BE9EF00806000 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F0E0A252247F990200B00D18 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				F0A8E55B247C092300E5BE26 /* LoginVC.swift */,
 				F0DA6A63247EC2D000136947 /* AddReplyCell.swift */,
 				F0DA6A64247EC2D000136947 /* AddReplyCell.xib */,
+				F0E0A250247F64D700B00D18 /* SignUpVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -526,6 +532,7 @@
 				EE33DB51247C0CAC008B5242 /* OTPViewController.swift in Sources */,
 				F0FB2C3B246A9C0F00CAE4A2 /* ViewController.swift in Sources */,
 				F0DD22A8247BE91F0052088C /* DiscussionVC.swift in Sources */,
+				F0E0A253247F990200B00D18 /* User.swift in Sources */,
 				F0025493247D8A4800530A7C /* ClassSection.swift in Sources */,
 				F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */,
 				F0406E57247D12B2002CD614 /* NotificationVC.swift in Sources */,
@@ -541,6 +548,7 @@
 				F00DEE7A247D93ED00722C77 /* StudentViewCell.swift in Sources */,
 				F0AE90BF247EA999002774E7 /* AssignmentHeaderView.swift in Sources */,
 				F0606370247BE8590096BA71 /* DiscussionHeaderView.swift in Sources */,
+				F0E0A251247F64D700B00D18 /* SignUpVC.swift in Sources */,
 				F0406E54247D1287002CD614 /* NotificationCell.swift in Sources */,
 				F0B03B2E247D057C00DCBB15 /* TeacherAddTopicVC.swift in Sources */,
 				EE33DB52247C0CAC008B5242 /* ForgotPasswordViewController.swift in Sources */,

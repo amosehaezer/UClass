@@ -16,6 +16,7 @@ let USER_REF = DB_REF.collection("users")
 let DISCUSSION_REF = DB_REF.collection("discussions")
 let COURSE_REF = DB_REF.collection("courses")
 let COMMENT_REF = DB_REF.collection("comments")
+let db = Firestore.firestore()
 
 struct Services {
     static let shared = Services()
@@ -57,6 +58,25 @@ struct Services {
             }
             completion()
         }
+    }
+    
+    func oneUserData(uid: String) -> String {
+        var name: String = ""
+        
+        
+        let data = db.collection("users").whereField("uid", isEqualTo: uid)
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                    name = ""
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+//                        name = "\(document?.data(as: name.self))"
+                    }
+                }
+        }
+        return name
     }
     
     

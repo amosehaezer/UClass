@@ -110,4 +110,9 @@ class LoginVC: UIViewController {
             }
         }
     }
+    @IBAction func signUpBtn(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "signup") as! SignUpVC
+                self.present(newViewController, animated: true, completion: nil)
+    }
 }

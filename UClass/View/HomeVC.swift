@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+//import FirebaseFirestore
 
 struct testSubject {
     
@@ -67,10 +68,11 @@ class HomeVC: UIViewController, AddClassData {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
         
-        let nonLetters  = CharacterSet.letters.inverted
-        let name = (testUser.name.components(separatedBy: nonLetters).first)!
+//        let nonLetters  = CharacterSet.letters.inverted
+//        let name = (testUser.name.components(separatedBy: nonLetters).first)!
+        let id = Auth.auth().currentUser?.uid
+        let name = Services.shared.oneUserData(uid: id!)
         homeProfileImage.image = UIImage(named: testUser.profileImage)
         homeProfileImage.layer.cornerRadius = homeProfileImage.frame.height/2
         if testUser.role == "student"{
@@ -111,10 +113,6 @@ class HomeVC: UIViewController, AddClassData {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -153,6 +151,29 @@ class HomeVC: UIViewController, AddClassData {
     func addClassToList(className: String, classSubject: String, studentsEmail: [String]){
         userSubject.append(testSubject(classname: className, classmember: studentsEmail, classSubject: classSubject, teacher: "Prof. Selena Strange", isExpanded: false, assignments: []))
     }
+    
+    @objc func showActionSheet(){
+           let actionSheet = UIAlertController(title: "", message: "A short description of the actions goes here", preferredStyle: .actionSheet)
+           
+           let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+           
+        let viewStudents = UIAlertAction(title: "View Students", style: .default){ action in
+            self.performSegue(withIdentifier: "viewStudents", sender: self)
+        }
+           
+           let addTopic = UIAlertAction(title: "Add Topic", style: .default){ action in
+               self.performSegue(withIdentifier: "addTopic", sender: self)
+           }
+           
+           let deleteTopic = UIAlertAction(title: "Delete Topic", style: .destructive, handler: nil)
+           
+           actionSheet.addAction(cancel)
+           actionSheet.addAction(viewStudents)
+           actionSheet.addAction(addTopic)
+           actionSheet.addAction(deleteTopic)
+           
+           present(actionSheet, animated: true, completion: nil)
+       }
     
     
 }
@@ -224,28 +245,13 @@ extension HomeVC: UITableViewDataSource {
         else { return AssignmentHomeCell() }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "insideTopic", sender: self)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "insideTopic" {
-            let it = segue.destination as! InsideTopicVC
-        } else if segue.identifier == "toAddClass" {
-            let c = segue.destination as! AddClassVC
-            c.className = self.className
-            c.classSubject = self.classSubject
-            c.studentsEmail = self.studentsEmail
-            c.delegate = self
-            c.instaceHVC = self
-        }
-        
-//        let addvc = segue.destination as! AddClassVC
-//        addvc.className = self.className
-//        addvc.classSubject = self.classSubject
-//        addvc.studentsEmail = self.studentsEmail
-//        addvc.delegate = self
-//        addvc.instaceHVC = self
+        let addvc = segue.destination as! AddClassVC
+        addvc.className = self.className
+        addvc.classSubject = self.classSubject
+        addvc.studentsEmail = self.studentsEmail
+        addvc.delegate = self
+        addvc.instaceHVC = self
     }
 }
 
@@ -293,6 +299,7 @@ extension HomeVC: UITableViewDelegate {
             }
             view.expandButton.tag = section
             view.expandButton.addTarget(self, action: #selector(expanded), for: .touchUpInside)
+            view.bergerButton.addTarget(self, action: #selector(showActionSheet), for: .touchUpInside)
             return view.contentView
         } else {
             return ClassSection()
