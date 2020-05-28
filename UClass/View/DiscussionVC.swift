@@ -84,37 +84,35 @@ class DiscussionVC: UIViewController {
         
 
         let section = button.tag
-
-        var indexPaths = [IndexPath]()
-        if testList[section].replies.count > 0{
-            for a in 0...(testList[section].replies.count){
-                let indexPath = IndexPath(row: a, section: section)
-                indexPaths.append(indexPath)
-            }
-            let isExpanded = testList[section].isExpanded
-            testList[section].isExpanded = !isExpanded
-
-
-            
-
-
-
-            if isExpanded {
-                
-                button.setTitle("Replies (\(testList[section].replies.count)) 􀆈", for: .normal)
-                discussionsTableView.deleteRows(at: indexPaths, with: .fade)
-
-//                discussionsTableView.headerView(forSection: section)?.backgroundColor = .black
-
-            }else{
-                button.setTitle("Replies (\(testList[section].replies.count)) 􀆇", for: .normal)
-                discussionsTableView.insertRows(at: indexPaths, with: .fade)
-
-
-            }
-            discussionsTableView.reloadData()
-        }
         
+        var indexPaths = [IndexPath]()
+        //        if testList[section].replies.count > 0{
+        for a in 0...(testList[section].replies.count){
+            let indexPath = IndexPath(row: a, section: section)
+            indexPaths.append(indexPath)
+        }
+        let isExpanded = testList[section].isExpanded
+        testList[section].isExpanded = !isExpanded
+        
+        
+        
+        
+        
+        
+        if isExpanded {
+            
+            button.setTitle("Replies (\(testList[section].replies.count)) 􀆈", for: .normal)
+            discussionsTableView.deleteRows(at: indexPaths, with: .fade)
+            
+//                discussionsTableView.headerView(forSection: section)?.backgroundColor = .black
+            
+        }else{
+            button.setTitle("Replies (\(testList[section].replies.count)) 􀆇", for: .normal)
+            discussionsTableView.insertRows(at: indexPaths, with: .fade)
+            
+            
+        }
+        discussionsTableView.reloadData()
 
 
     }
@@ -211,7 +209,20 @@ class DiscussionVC: UIViewController {
             testList[section].replies[row].isLiked = false
         }
         discussionsTableView.reloadData()
+    }
+    
+    @objc func pinned(button: UIButton){
         
+        let section = button.tag
+        
+        if !testList[section].isPinned{
+            button.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            testList[section].isPinned = true
+        }else{
+            button.setImage(UIImage(systemName: "lightbulb"), for: .normal)
+            testList[section].isPinned = false
+        }
+        discussionsTableView.reloadData()
         
     }
     
@@ -320,9 +331,11 @@ extension DiscussionVC: UITableViewDelegate {
             view.replyButton.tag = section
             view.likeButton.tag = section
             view.dislikeButton.tag = section
+            view.pinnedButton.tag = section
             view.likeButton.addTarget(self, action: #selector(liked), for: .touchUpInside)
             view.dislikeButton.addTarget(self, action: #selector(disliked), for: .touchUpInside)
             view.replyButton.addTarget(self, action: #selector(handleExpandClose), for: .touchUpInside)
+            view.pinnedButton.addTarget(self, action: #selector(pinned), for: .touchUpInside)
             
             if testList[section].isLiked {
                 view.likeButton.setImage(UIImage(systemName: "hand.thumbsup.fill"), for: .normal)
@@ -330,6 +343,12 @@ extension DiscussionVC: UITableViewDelegate {
             } else if testList[section].isDisliked{
                 view.dislikeButton.setImage(UIImage(systemName: "hand.thumbsdown.fill"), for: .normal)
                 view.likeButton.setImage(UIImage(systemName: "hand.thumbsup"), for: .normal)
+            }
+            
+            if testList[section].isPinned {
+                view.pinnedButton.setImage(UIImage(systemName: "lightbulb.fill"), for: .normal)
+            } else if !testList[section].isPinned {
+                view.pinnedButton.setImage(UIImage(systemName: "lightbulb"), for: .normal)
             }
             
             return view.contentView

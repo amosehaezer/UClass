@@ -8,11 +8,12 @@
 
 import Foundation
 
-public struct User: Codable {
-    var uid: String
-    var name: String
-    var email: String
-    var role: Int
+public struct User {
+    
+    var uid: String = ""
+    var name: String = ""
+    var email: String = ""
+    var role: Int = 0
     
     enum CodingKeys: String, CodingKey {
         case uid

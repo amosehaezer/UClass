@@ -102,38 +102,12 @@ class SignUpVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
             }
 
             Services.shared.addUser(userData: data) {
-//                print("DEBUG : Success add new user!")
                 self.notifLabel.text! = "Success add new user!"
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! HomeVC
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "nav") as! UINavigationController
                 self.present(newViewController, animated: true, completion: nil)
-                
             }
         }
-        
-        
-//        if let email = EmailField.text, let password = PasswordField.text, let role = RoleField.text{
-//        Auth.auth().signIn(withEmail: email, password: password) { user, error in
-//            if let Error = error{
-//
-//                let errorAlert = UIAlertController(title: "Error", message: Error.localizedDescription, preferredStyle: .alert)
-//                let errorAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//                errorAlert.addAction(errorAction)
-//                self.present(errorAlert, animated: true, completion:  nil)
-//            }else{
-//                let confirmpass = self.ConfirmpassField.text
-//                if password == confirmpass {
-//                    self.signupUser()
-//                }
-//                else{
-//                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-//                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-//                alertController.addAction(defaultAction)
-//                self.present(alertController, animated: true, completion: nil)
-//                    }
-//                }
-//            }
-//        }
     }
     
     func signupUser(){

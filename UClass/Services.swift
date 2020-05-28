@@ -16,6 +16,7 @@ let USER_REF = DB_REF.collection("users")
 let DISCUSSION_REF = DB_REF.collection("discussions")
 let COURSE_REF = DB_REF.collection("courses")
 let COMMENT_REF = DB_REF.collection("comments")
+let CLASS_REF = DB_REF.collection("classes")
 let db = Firestore.firestore()
 
 struct Services {
@@ -32,6 +33,16 @@ struct Services {
     }
     func addCourse(courseData: [String:Any], completion: @escaping() -> Void) {
         COURSE_REF.addDocument(data: courseData) { (error) in
+            if let e = error {
+                print(e.localizedDescription)
+                return
+            }
+            completion()
+        }
+    }
+    
+    func addClass(classData: [String:Any], completion: @escaping() -> Void) {
+        CLASS_REF.addDocument(data: classData) { (error) in
             if let e = error {
                 print(e.localizedDescription)
                 return
@@ -60,23 +71,41 @@ struct Services {
         }
     }
     
-    func oneUserData(uid: String) -> String {
-        var name: String = ""
-        
-        
-        let data = db.collection("users").whereField("uid", isEqualTo: uid)
+    func oneUserData(uid: String) {
+        let read = db.collection("users").whereField("uid", isEqualTo: uid)
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
-                    name = ""
+                    return
                 } else {
-                    for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
-//                        name = "\(document?.data(as: name.self))"
-                    }
-                }
+                        let x = querySnapshot?.documents.first?.data()
+                        guard let email = x!["email"] as? String else {return}
+//                        self.getEmail(email: email)
+                        guard let name = x!["name"] as? String else {return}
+                        guard let uid = x!["uid"] as? String else {return}
+                        guard let role = x!["role"] as? Int else {return}
+                        var u = User(uid: uid, name: name, email: email, role: role)
+                        u.email = email
+                        u.name = name
+                    print(u.name)
+//                        u.email = email
+//                        u.name = name
+//                        u.role = role
+//                        u.uid = uid
+//                    return tempEmail
+//                }
+            }
         }
-        return name
+    }
+    
+    
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     

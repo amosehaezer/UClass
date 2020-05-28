@@ -15,6 +15,8 @@ protocol AddClassData {
 class AddClassVC: UIViewController {
     
     var instaceHVC : HomeVC!
+    
+    
 
     @IBOutlet weak var studentEmails: UITextView!
     @IBOutlet weak var classSubjectTextfield: UITextField!
@@ -28,7 +30,7 @@ class AddClassVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       navigationController?.navigationBar.isHidden = true
     }
     
     
@@ -43,7 +45,26 @@ class AddClassVC: UIViewController {
         instaceHVC.tableView.reloadData()
         
         self.navigationController!.popToRootViewController(animated: true)
+        
+//        Services.
+        
     }
+    @IBAction func cancelBtn(_ sender: Any) {
+        performSegue(withIdentifier: "toHome", sender: nil)
+    }
+    
+//    func addTopic() {
+//        var data: [String: Any]
+//        
+//        data = [
+//            "topicTitle": titleTextField.text!,
+//            "topicDescription": descriptionTextView.text!
+//        ]
+//        
+//        Services.shared.addDiscussion(discussionData: data) {
+//            print("DEBUG: Success create a topic!")
+//        }
+//    }
     
     
     

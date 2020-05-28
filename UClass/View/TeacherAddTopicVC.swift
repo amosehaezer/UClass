@@ -72,7 +72,8 @@ class TeacherAddTopicVC: UIViewController, UINavigationControllerDelegate, UIIma
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        Services.shared.addDiscussion(discussionData: <#T##[String : Any]#>, completion: <#T##() -> Void#>)
+
+        
         
         initialConfiguration()
     }

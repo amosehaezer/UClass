@@ -37,7 +37,7 @@
 		F0025494247D8A4800530A7C /* ClassSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0025492247D8A4800530A7C /* ClassSection.xib */; };
 		F00DEE7A247D93ED00722C77 /* StudentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DEE78247D93ED00722C77 /* StudentViewCell.swift */; };
 		F00DEE7B247D93ED00722C77 /* StudentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00DEE79247D93ED00722C77 /* StudentViewCell.xib */; };
-		F00DEE7D247D941500722C77 /* StudentViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DEE7C247D941500722C77 /* StudentViewVC.swift */; };
+		F00DEE7D247D941500722C77 /* StudentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DEE7C247D941500722C77 /* StudentVC.swift */; };
 		F0406E54247D1287002CD614 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0406E52247D1287002CD614 /* NotificationCell.swift */; };
 		F0406E55247D1287002CD614 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0406E53247D1287002CD614 /* NotificationCell.xib */; };
 		F0406E57247D12B2002CD614 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0406E56247D12B2002CD614 /* NotificationVC.swift */; };
@@ -106,7 +106,7 @@
 		F0025492247D8A4800530A7C /* ClassSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassSection.xib; sourceTree = "<group>"; };
 		F00DEE78247D93ED00722C77 /* StudentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewCell.swift; sourceTree = "<group>"; };
 		F00DEE79247D93ED00722C77 /* StudentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentViewCell.xib; sourceTree = "<group>"; };
-		F00DEE7C247D941500722C77 /* StudentViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewVC.swift; sourceTree = "<group>"; };
+		F00DEE7C247D941500722C77 /* StudentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentVC.swift; sourceTree = "<group>"; };
 		F0406E52247D1287002CD614 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		F0406E53247D1287002CD614 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		F0406E56247D12B2002CD614 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
@@ -244,14 +244,12 @@
 				F0576D8B247C1EF100F8D313 /* SignInVC.swift */,
 				F002548B247D89E600530A7C /* HomeVC.swift */,
 				F0AE90AE247EA632002774E7 /* InsideTopicVC.swift */,
-				F00DEE7C247D941500722C77 /* StudentViewVC.swift */,
+				F00DEE7C247D941500722C77 /* StudentVC.swift */,
 				F0406E56247D12B2002CD614 /* NotificationVC.swift */,
 				F0DD22A7247BE91F0052088C /* DiscussionVC.swift */,
 				F0576D8D247C1F1300F8D313 /* ProfilVC.swift */,
 				F0B03B2D247D057C00DCBB15 /* TeacherAddTopicVC.swift */,
 				F0A8E55B247C092300E5BE26 /* LoginVC.swift */,
-				F0DA6A63247EC2D000136947 /* AddReplyCell.swift */,
-				F0DA6A64247EC2D000136947 /* AddReplyCell.xib */,
 				F0E0A250247F64D700B00D18 /* SignUpVC.swift */,
 			);
 			path = View;
@@ -304,6 +302,8 @@
 		F0AE90AD247EA60C002774E7 /* Inside */ = {
 			isa = PBXGroup;
 			children = (
+				F0DA6A63247EC2D000136947 /* AddReplyCell.swift */,
+				F0DA6A64247EC2D000136947 /* AddReplyCell.xib */,
 				F0AE90B0247EA67E002774E7 /* InsideTopicSeeAll.swift */,
 				F0AE90B1247EA67E002774E7 /* InsideTopicSeeAll.xib */,
 			);
@@ -539,7 +539,7 @@
 				F0AE90B2247EA67E002774E7 /* InsideTopicSeeAll.swift in Sources */,
 				F002548F247D8A3300530A7C /* AssignmentHomeCell.swift in Sources */,
 				F05E4342247BE77D00162C84 /* RepliesCell.swift in Sources */,
-				F00DEE7D247D941500722C77 /* StudentViewVC.swift in Sources */,
+				F00DEE7D247D941500722C77 /* StudentVC.swift in Sources */,
 				F0A29670247E0C010000DEFB /* Services.swift in Sources */,
 				F0F7FE07247D067B00BFB2FE /* LatoLabel.swift in Sources */,
 				F0576D8E247C1F1300F8D313 /* ProfilVC.swift in Sources */,

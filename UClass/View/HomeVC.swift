@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 //import FirebaseFirestore
 
+
 struct testSubject {
     
     var classname : String
@@ -42,16 +43,44 @@ class HomeVC: UIViewController, AddClassData {
     var testUser = currentUser(role: "teacher", email: "anitamiles@yahoo.com", name: "Prof. Selena Strange", profileImage: "profile-4")
     
     var subjectList = [
-        testSubject(classname: "XII IPA 4", classmember: ["anitamiles@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"], classSubject: "Mathematics", teacher: "Prof. Selena Strange", isExpanded: false, assignments: [Assignment(assignmentName: "Integral", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020"),Assignment(assignmentName: "Integral 2", discussionsCount: 5, lastDiscussed: "Monday, 10 May 2020"),Assignment(assignmentName: "Integral 3", discussionsCount: 12, lastDiscussed: "Wednesday, 12 May 2020"),Assignment(assignmentName: "Turunan 1", discussionsCount: 2, lastDiscussed: "Friday, 14 May 2020")]),
-        testSubject(classname: "XII IPA 4", classmember: ["anitamiles@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"], classSubject: "Physics", teacher: "Granger Dubois", isExpanded: false, assignments: [Assignment(assignmentName: "Velocity", discussionsCount: 5,lastDiscussed: "Monday, 3 May 2020"),Assignment(assignmentName: "Gaya", discussionsCount: 22, lastDiscussed: "Wednesday, 12 May 2020"),Assignment(assignmentName: "Momentum", discussionsCount: 7, lastDiscussed: "Wednesday, 12 May 2020")]),
-        testSubject(classname: "XII IPA 4", classmember: ["anitamiles@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"], classSubject: "Chemistry", teacher: "Nolan Breger", isExpanded: false, assignments: [Assignment(assignmentName: "Stoikiometri", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020")]),
-        testSubject(classname: "XII IPA 4", classmember: ["anitamiles@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"], classSubject: "Bahasa Indonesia", teacher: "Budi Dabudi Budiman", isExpanded: false, assignments: [Assignment(assignmentName: "Puisi", discussionsCount: 5,lastDiscussed: "Sunday, 2 May 2020"),Assignment(assignmentName: "Prosa", discussionsCount: 8,lastDiscussed: "Thursday, 6 May 2020")]),
-        testSubject(classname: "XII IPA 5", classmember: ["dadidu@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"], classSubject: "Mathematics", teacher: "Prof. Selena Strange", isExpanded: false, assignments: [Assignment(assignmentName: "Integral", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020")]),
-        testSubject(classname: "XII IPA 1", classmember: ["dadidu@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"], classSubject: "Mathematics", teacher: "Prof. Selena Strange", isExpanded: false, assignments: [Assignment(assignmentName: "Integral", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020")]),
-        testSubject(classname: "XII IPA 3", classmember: ["dadidu@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"], classSubject: "Mathematics", teacher: "Prof. Selena Strange", isExpanded: false, assignments: [Assignment(assignmentName: "Integral", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020")]),
+        testSubject(classname: "XII IPA 4",
+                    classmember: ["anitamiles@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"],
+                    classSubject: "Mathematics", teacher: "Prof. Selena Strange", isExpanded: false,
+                    assignments: [Assignment(assignmentName: "Integral", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020"),
+                                  Assignment(assignmentName: "Integral 2", discussionsCount: 5, lastDiscussed: "Monday, 10 May 2020"),
+                                  Assignment(assignmentName: "Integral 3", discussionsCount: 12, lastDiscussed: "Wednesday, 12 May 2020"),
+                                  Assignment(assignmentName: "Turunan 1", discussionsCount: 2, lastDiscussed: "Friday, 14 May 2020")]),
+        testSubject(classname: "XII IPA 4",
+                    classmember: ["anitamiles@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"],
+                    classSubject: "Physics", teacher: "Granger Dubois", isExpanded: false,
+                    assignments: [Assignment(assignmentName: "Velocity", discussionsCount: 5,lastDiscussed: "Monday, 3 May 2020"),
+                                  Assignment(assignmentName: "Gaya", discussionsCount: 22, lastDiscussed: "Wednesday, 12 May 2020"),
+                                  Assignment(assignmentName: "Momentum", discussionsCount: 7, lastDiscussed: "Wednesday, 12 May 2020")]),
+        testSubject(classname: "XII IPA 4",
+                    classmember: ["anitamiles@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"],
+                    classSubject: "Chemistry", teacher: "Nolan Breger", isExpanded: false,
+                    assignments: [Assignment(assignmentName: "Stoikiometri", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020")]),
+        testSubject(classname: "XII IPA 4",
+                    classmember: ["anitamiles@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"],
+                    classSubject: "Bahasa Indonesia", teacher: "Budi Dabudi Budiman", isExpanded: false,
+                    assignments: [Assignment(assignmentName: "Puisi", discussionsCount: 5,lastDiscussed: "Sunday, 2 May 2020"),
+                                  Assignment(assignmentName: "Prosa", discussionsCount: 8,lastDiscussed: "Thursday, 6 May 2020")]),
+        testSubject(classname: "XII IPA 5",
+                    classmember: ["dadidu@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"],
+                    classSubject: "Mathematics", teacher: "Prof. Selena Strange", isExpanded: false,
+                    assignments: [Assignment(assignmentName: "Integral", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020")]),
+        testSubject(classname: "XII IPA 1",
+                    classmember: ["dadidu@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"],
+                    classSubject: "Mathematics", teacher: "Prof. Selena Strange", isExpanded: false,
+                    assignments: [Assignment(assignmentName: "Integral", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020")]),
+        testSubject(classname: "XII IPA 3",
+                    classmember: ["dadidu@yahoo.com", "roberto@yahoo.com","lilianjane@yahoo.com","alibaba@yahoo.com"],
+                    classSubject: "Mathematics", teacher: "Prof. Selena Strange", isExpanded: false,
+                    assignments: [Assignment(assignmentName: "Integral", discussionsCount: 11,lastDiscussed: "Sunday, 2 May 2020")]),
     ]
     
     public var userSubject : [testSubject] = []
+    
 
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var headerView: UIView!
@@ -69,15 +98,21 @@ class HomeVC: UIViewController, AddClassData {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let nonLetters  = CharacterSet.letters.inverted
-//        let name = (testUser.name.components(separatedBy: nonLetters).first)!
-        let id = Auth.auth().currentUser?.uid
-        let name = Services.shared.oneUserData(uid: id!)
+        navigationController?.navigationBar.isHidden = true
+        firstInit()
+        let nonLetters  = CharacterSet.letters.inverted
+        let name = (testUser.name.components(separatedBy: nonLetters).first)!
+        
+//        let id = Auth.auth().currentUser?.uid
+//        var name = Services.shared.oneUserData(uid: id!)
+        
         homeProfileImage.image = UIImage(named: testUser.profileImage)
         homeProfileImage.layer.cornerRadius = homeProfileImage.frame.height/2
         if testUser.role == "student"{
             roleLabel.text = "Student"
         } else {roleLabel.text = "Teacher"}
+        print(name)
+        
         welcomeLabel.text = "Hello, \(name)"
         headerView.layer.cornerRadius = 20
         self.tableView.dataSource = self
@@ -115,7 +150,9 @@ class HomeVC: UIViewController, AddClassData {
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        navigationController?.navigationBar.isHidden = true
     }
+    
     
     @IBAction func editClass(_ sender: UIButton) {
         let actionsheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -138,6 +175,23 @@ class HomeVC: UIViewController, AddClassData {
         
     }
     
+    func firstInit() {
+        
+        var data: [String: Any]
+        var assignment: String = ""
+        
+        data = [
+            "courseName": "Mathematics",
+            "courseClass": "XII IPA 4",
+            "ownerID": "",
+            "Assignment" : [assignment],
+        ]
+        
+        Services.shared.addUser(userData: data) {
+            print("DEBUG: add Data Success")
+        }
+    }
+    
     func AddClassPage() {
         performSegue(withIdentifier: "toAddClass", sender: UIButton.self)
     }
@@ -153,7 +207,7 @@ class HomeVC: UIViewController, AddClassData {
     }
     
     @objc func showActionSheet(){
-           let actionSheet = UIAlertController(title: "", message: "A short description of the actions goes here", preferredStyle: .actionSheet)
+           let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
            
            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
            
@@ -181,46 +235,48 @@ class HomeVC: UIViewController, AddClassData {
 extension HomeVC: UITableViewDataSource {
     
     @objc func expanded(button: UIButton){
-        
- 
-    
-        let section = button.tag
-        
-        var indexPaths = [IndexPath]()
-        if userSubject[section].assignments.count > 0{
-            for a in 0...(userSubject[section].assignments.count-1){
-                let indexPath = IndexPath(row: a, section: section)
-                indexPaths.append(indexPath)
-            }
-            let isExpanded = userSubject[section].isExpanded
-            userSubject[section].isExpanded = !isExpanded
-            
-            
-            if isExpanded {
-                
-                tableView.deleteRows(at: indexPaths, with: .fade)
+           let section = button.tag
+           
+           var indexPaths = [IndexPath]()
+           if userSubject[section].assignments.count > 0{
+               for a in 0...(userSubject[section].assignments.count-1){
+                   let indexPath = IndexPath(row: a, section: section)
+                   indexPaths.append(indexPath)
+               }
+               
+           } else {
+               indexPaths.append(IndexPath(row: 0, section: section))
+           }
+           
+           let isExpanded = userSubject[section].isExpanded
+           userSubject[section].isExpanded = !isExpanded
+           
+           
+           if isExpanded {
+               
+               tableView.deleteRows(at: indexPaths, with: .fade)
 
-            } else {
-                tableView.insertRows(at: indexPaths, with: .fade)
-            
-        }
-            
+           } else {
+               tableView.insertRows(at: indexPaths, with: .fade)
+           }
+           tableView.reloadData()
 
-        }
-        tableView.reloadData()
-
-        
-        
-    }
+       }
     
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if !userSubject[section].isExpanded
-        {
-            return 0
+        if testUser.role == "teacher" && userSubject[section].assignments.count == 0{
+            if !userSubject[section].isExpanded {
+                return 0
+            } else {return 1}
+        } else {
+            if !userSubject[section].isExpanded
+            {
+                return 0
+            }
+            return userSubject[section].assignments.count
         }
-        return userSubject[section].assignments.count
         
     }
     
@@ -230,28 +286,52 @@ extension HomeVC: UITableViewDataSource {
         let row = indexPath.row
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: "assignmentCell") as? AssignmentHomeCell {
-            cell.assignmentTitleLabel.text = userSubject[section].assignments[row].assignmentName
-            cell.totalDiscussionLabel.text = "Discussions: \(userSubject[section].assignments[row].discussionsCount)"
-            cell.lastRepliedTimeLabel.text = "Last Replied: \(userSubject[section].assignments[row].lastDiscussed)"
-            if row == userSubject[section].assignments.count-1{
+            
+            if userSubject[section].assignments.count == 0{
+                cell.assignmentTitleLabel.text = "You don't have any topic yet."
+                cell.totalDiscussionLabel.text = "Press ... to add a new topic."
+                cell.lastRepliedTimeLabel.text = ""
+                //cell.totalDiscussionLabel.font = UIFont(name: cell.totalDiscussionLabel.font.fontName, size: 12)
+                
                 cell.containerView.layer.cornerRadius = 20
+                //cell.lastRepliedTimeLabel.isHidden = true
+                //cell.totalDiscussionLabel.isHidden = true
                 cell.separatorLine.isHidden = true
+                
             } else {
-                cell.containerView.layer.cornerRadius = 0
-                cell.separatorLine.isHidden = false
+                //cell.lastRepliedTimeLabel.isHidden = false
+                //cell.totalDiscussionLabel.isHidden = false
+                cell.assignmentTitleLabel.text = userSubject[section].assignments[row].assignmentName
+                cell.totalDiscussionLabel.text = "Discussions: \(userSubject[section].assignments[row].discussionsCount)"
+                cell.lastRepliedTimeLabel.text = "Last Replied: \(userSubject[section].assignments[row].lastDiscussed)"
+                if row == userSubject[section].assignments.count-1{
+                    cell.containerView.layer.cornerRadius = 20
+                    cell.separatorLine.isHidden = true
+                } else {
+                    cell.containerView.layer.cornerRadius = 0
+                    cell.separatorLine.isHidden = false
+                }
             }
             return cell
         }
         else { return AssignmentHomeCell() }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "insideTopic", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let addvc = segue.destination as! AddClassVC
-        addvc.className = self.className
-        addvc.classSubject = self.classSubject
-        addvc.studentsEmail = self.studentsEmail
-        addvc.delegate = self
-        addvc.instaceHVC = self
+        if segue.identifier == "insideTopic" {
+            let it = segue.destination as! InsideTopicVC
+        } else if segue.identifier == "toAddClass" {
+            let c = segue.destination as! AddClassVC
+            c.className = self.className
+            c.classSubject = self.classSubject
+            c.studentsEmail = self.studentsEmail
+            c.delegate = self
+            c.instaceHVC = self
+        }
     }
 }
 

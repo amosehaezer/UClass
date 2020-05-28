@@ -30,8 +30,6 @@ class StudentVC: UIViewController {
         setupTableView()
         
         // Do any additional setup after loading the view.
-        
-        
     }
     @IBAction func editPressed(_ sender: UIBarButtonItem) {
         
@@ -102,7 +100,7 @@ extension StudentVC: UITableViewDataSource {
 
 extension StudentVC: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        searchStudents = students.filter({$0.lowercased().prefix(searchText.count == searchText.lowercased())})
+        searchStudents = students.filter({$0.lowercased().prefix(searchText.count == searchText.lowercased())})
         searchEnabled = true
         studentTable.reloadData()
     }
