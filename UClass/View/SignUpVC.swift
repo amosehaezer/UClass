@@ -18,6 +18,7 @@ class SignUpVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var ConfirmpassField: UITextField!
     @IBOutlet weak var RoleField: UITextField!
     @IBOutlet weak var notifLabel: UILabel!
+    @IBOutlet weak var signUpButton: UIButton!
     
     let role = ["Teacher","Student"]
     var saveRole: Int = 0
@@ -26,6 +27,8 @@ class SignUpVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        signUpButton.layer.cornerRadius = 10
 
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -40,9 +43,11 @@ class SignUpVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     }
     @IBAction func LoginButton(_ sender: UIButton) {
 //        performSegue(withIdentifier: "toLogin", sender: self)
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "login") as! LoginVC
-                self.present(newViewController, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+        
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "login") as! LoginVC
+//                self.present(newViewController, animated: true, completion: nil)
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
             return 1
