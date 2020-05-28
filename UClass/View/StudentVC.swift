@@ -21,6 +21,7 @@ class StudentVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         self.studentTable.dataSource = self
         self.studentTable.delegate = self
         
@@ -46,6 +47,12 @@ class StudentVC: UIViewController {
         
     }
     
+    @IBAction func bakButton2(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
     func setupTableView(){
         studentTable.register(UINib(nibName: "StudentViewCell", bundle: nil), forCellReuseIdentifier: getIdentifier(forSection: 0))
     }

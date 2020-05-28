@@ -24,6 +24,15 @@ class NotificationVC: UIViewController {
         setupTableView()
     }
     
+    
+    @IBAction func backButton2(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     func setupTableView() {
         notificationTable.register(UINib(nibName: "NotificationCell", bundle: nil), forCellReuseIdentifier: getIdentifier(forSection: 0))
     }

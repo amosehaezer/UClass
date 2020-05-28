@@ -27,6 +27,9 @@ class TeacherAddTopicVC: UIViewController, UINavigationControllerDelegate, UIIma
     var underlineDetector: Bool = false
     
     
+    @IBAction func BackButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
     
     @IBAction func boldButton(_ sender: Any) {
         if boldDetector == true {
