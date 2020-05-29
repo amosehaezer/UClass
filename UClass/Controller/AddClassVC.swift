@@ -18,6 +18,7 @@ class AddClassVC: UIViewController {
     
     
 
+    @IBOutlet weak var emailTextView: UITextView!
     @IBOutlet weak var studentEmails: UITextView!
     @IBOutlet weak var classSubjectTextfield: UITextField!
     @IBOutlet weak var classNameTextfield: UITextField!
@@ -31,6 +32,10 @@ class AddClassVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        navigationController?.navigationBar.isHidden = true
+        emailTextView.layer.borderWidth = 1
+        emailTextView.layer.borderColor = UIColor.lightGray.cgColor
+        emailTextView.layer.cornerRadius = 10
+        self.hideKeyboardWhenTappedAround()
     }
     
     
@@ -44,13 +49,14 @@ class AddClassVC: UIViewController {
         
         instaceHVC.tableView.reloadData()
         
-        self.navigationController!.popToRootViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
         
 //        Services.
         
     }
     @IBAction func cancelBtn(_ sender: Any) {
-        performSegue(withIdentifier: "toHome", sender: nil)
+        //performSegue(withIdentifier: "toHome", sender: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 //    func addTopic() {

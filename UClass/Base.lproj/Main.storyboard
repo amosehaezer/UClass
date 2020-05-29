@@ -84,7 +84,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBZ-MH-kdW">
-                                <rect key="frame" x="347" y="55" width="48" height="30"/>
+                                <rect key="frame" x="20" y="62" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
@@ -99,6 +99,7 @@
                     <connections>
                         <outlet property="classNameTextfield" destination="VdT-ma-1jX" id="kDM-uz-hil"/>
                         <outlet property="classSubjectTextfield" destination="f9S-v4-gcU" id="fwg-tb-MVz"/>
+                        <outlet property="emailTextView" destination="c7A-lA-6wP" id="qIT-Cz-dQ3"/>
                         <outlet property="studentEmails" destination="c7A-lA-6wP" id="YeT-VF-t4Q"/>
                     </connections>
                 </viewController>
@@ -155,6 +156,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cza-WR-YOc">
                                 <rect key="frame" x="31" y="526" width="352" height="40"/>
                                 <color key="backgroundColor" name="main-blue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dXW-zn-Hyk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -224,9 +228,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vIg-yR-Ukj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="vIg-yR-Ukj">
                                 <rect key="frame" x="0.0" y="108" width="414" height="788"/>
                                 <color key="backgroundColor" name="background"/>
+                                <color key="sectionIndexBackgroundColor" name="background"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
@@ -794,7 +799,7 @@
                         <outlet property="roleLabel" destination="dKd-eL-rcA" id="sOo-yy-Zbb"/>
                         <outlet property="tableView" destination="0vI-1v-iwB" id="OPd-mr-qHs"/>
                         <outlet property="welcomeLabel" destination="Zsr-Ed-BUD" id="fc4-Kd-KlS"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toAddClass" id="vw1-Lf-rYg"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toAddClass" id="vw1-Lf-rYg"/>
                         <segue destination="78J-kb-XHi" kind="show" identifier="insideTopic" id="rYS-aK-s3t"/>
                         <segue destination="a2v-Q7-b3s" kind="show" identifier="viewStudents" id="fVE-bC-edc"/>
                         <segue destination="iNy-42-RMR" kind="show" identifier="addTopic" id="Ruj-Nw-mwN"/>
@@ -971,6 +976,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNo-CW-EF0">
                                 <rect key="frame" x="30" y="614" width="250" height="40"/>
                                 <color key="backgroundColor" name="main-blue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FoK-ip-m1y"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1062,11 +1070,11 @@
                                     <action selector="changePicture:" destination="fta-N1-y92" eventType="touchUpInside" id="YUe-5O-WdO"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mbi-4Y-dao">
-                                <rect key="frame" x="20" y="349" width="374" height="144"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mbi-4Y-dao">
+                                <rect key="frame" x="20" y="349" width="374" height="272"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="thx-em-alK"/>
+                                    <constraint firstAttribute="height" constant="272" id="dsj-pL-Lxy"/>
                                 </constraints>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vT-Xu-FVZ">
@@ -1078,10 +1086,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myG-TQ-F3r">
                                 <rect key="frame" x="179.5" y="778" width="55" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="3Ca-ZC-fxE"/>
-                                    <constraint firstAttribute="height" constant="30" id="CJa-zO-WLL"/>
-                                </constraints>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -1092,26 +1096,26 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wkh-BL-5di">
                                 <rect key="frame" x="132" y="112" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="87Y-hl-hhL"/>
-                                    <constraint firstAttribute="height" constant="150" id="ZL8-lZ-DMU"/>
+                                    <constraint firstAttribute="height" constant="150" id="Shw-Hk-Rpu"/>
+                                    <constraint firstAttribute="width" constant="150" id="ucq-Pk-AIP"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="wkh-BL-5di" firstAttribute="leading" secondItem="LP9-z1-4j0" secondAttribute="leading" constant="132" id="1cB-LY-xdN"/>
-                            <constraint firstItem="myG-TQ-F3r" firstAttribute="centerX" secondItem="Mbi-4Y-dao" secondAttribute="centerX" id="29v-wW-etA"/>
-                            <constraint firstItem="myG-TQ-F3r" firstAttribute="bottom" secondItem="LP9-z1-4j0" secondAttribute="bottom" id="62c-dy-Dl4"/>
-                            <constraint firstItem="Mbi-4Y-dao" firstAttribute="top" secondItem="gdS-kZ-mrM" secondAttribute="bottom" constant="49" id="Eji-Lz-WbV"/>
-                            <constraint firstItem="Mbi-4Y-dao" firstAttribute="centerY" secondItem="u5M-UH-m3E" secondAttribute="centerY" id="J9h-Or-dCY"/>
-                            <constraint firstItem="myG-TQ-F3r" firstAttribute="centerX" secondItem="gdS-kZ-mrM" secondAttribute="centerX" id="NVs-bZ-0H9"/>
-                            <constraint firstItem="myG-TQ-F3r" firstAttribute="centerX" secondItem="6vT-Xu-FVZ" secondAttribute="centerX" id="Sno-9P-rtI"/>
-                            <constraint firstItem="myG-TQ-F3r" firstAttribute="top" secondItem="6vT-Xu-FVZ" secondAttribute="bottom" constant="8" id="UdG-hc-Z2Z"/>
-                            <constraint firstItem="gdS-kZ-mrM" firstAttribute="top" secondItem="u5M-UH-m3E" secondAttribute="top" constant="270" id="a3j-5u-0gp"/>
-                            <constraint firstItem="myG-TQ-F3r" firstAttribute="centerX" secondItem="wkh-BL-5di" secondAttribute="centerX" id="cNI-t0-EMQ"/>
-                            <constraint firstItem="gdS-kZ-mrM" firstAttribute="top" secondItem="wkh-BL-5di" secondAttribute="bottom" constant="8" id="fVK-6e-Fjt"/>
-                            <constraint firstItem="gdS-kZ-mrM" firstAttribute="centerX" secondItem="wkh-BL-5di" secondAttribute="centerX" id="kWc-2Z-7hY"/>
-                            <constraint firstItem="Mbi-4Y-dao" firstAttribute="centerX" secondItem="u5M-UH-m3E" secondAttribute="centerX" id="mch-cl-B2G"/>
+                            <constraint firstItem="gdS-kZ-mrM" firstAttribute="top" secondItem="wkh-BL-5di" secondAttribute="bottom" constant="8" id="0cB-EZ-9iP"/>
+                            <constraint firstItem="LP9-z1-4j0" firstAttribute="trailing" secondItem="Mbi-4Y-dao" secondAttribute="trailing" constant="20" id="0pl-lh-FaW"/>
+                            <constraint firstItem="Mbi-4Y-dao" firstAttribute="leading" secondItem="LP9-z1-4j0" secondAttribute="leading" constant="20" id="6J9-kl-SuJ"/>
+                            <constraint firstItem="wkh-BL-5di" firstAttribute="centerX" secondItem="Mbi-4Y-dao" secondAttribute="centerX" id="6Nd-pe-mrw"/>
+                            <constraint firstItem="wkh-BL-5di" firstAttribute="top" secondItem="LP9-z1-4j0" secondAttribute="top" constant="112" id="Dgh-cO-sSO"/>
+                            <constraint firstItem="6vT-Xu-FVZ" firstAttribute="centerX" secondItem="wkh-BL-5di" secondAttribute="centerX" id="VIb-zD-Vbp"/>
+                            <constraint firstItem="gdS-kZ-mrM" firstAttribute="centerX" secondItem="Mbi-4Y-dao" secondAttribute="centerX" id="XaH-HJ-jrt"/>
+                            <constraint firstItem="Mbi-4Y-dao" firstAttribute="top" secondItem="gdS-kZ-mrM" secondAttribute="bottom" constant="49" id="a1U-5g-JI7"/>
+                            <constraint firstItem="myG-TQ-F3r" firstAttribute="top" secondItem="6vT-Xu-FVZ" secondAttribute="bottom" constant="8" id="d0F-6y-RPn"/>
+                            <constraint firstItem="Mbi-4Y-dao" firstAttribute="centerX" secondItem="LP9-z1-4j0" secondAttribute="centerX" id="eAC-JD-csr"/>
+                            <constraint firstItem="6vT-Xu-FVZ" firstAttribute="centerX" secondItem="Mbi-4Y-dao" secondAttribute="centerX" id="eJ8-Kd-fhO"/>
+                            <constraint firstItem="LP9-z1-4j0" firstAttribute="bottom" secondItem="myG-TQ-F3r" secondAttribute="bottom" id="hFy-XI-R3K"/>
+                            <constraint firstItem="myG-TQ-F3r" firstAttribute="centerX" secondItem="6vT-Xu-FVZ" secondAttribute="centerX" id="oi4-II-cC7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LP9-z1-4j0"/>
                     </view>
@@ -1123,7 +1127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qRB-ZR-Mh0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="1301"/>
+            <point key="canvasLocation" x="1602.8985507246377" y="1300.4464285714284"/>
         </scene>
         <!--toAddDiscussion-->
         <scene sceneID="19B-ma-MXu">

@@ -18,20 +18,24 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjo-Q4-YZE">
-                        <rect key="frame" x="20" y="10" width="300" height="21"/>
+                        <rect key="frame" x="20" y="20" width="42" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="300" id="MVf-0h-OVf"/>
                             <constraint firstAttribute="height" constant="21" id="aGy-tO-uZu"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="7CK-JA-LAs">
+                        <rect key="frame" x="20" y="78" width="337" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ozw-hF-KDg"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OP-rT-70w">
-                        <rect key="frame" x="20" y="39" width="300" height="21"/>
+                        <rect key="frame" x="20" y="46" width="300" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="300" id="kdg-K4-HPp"/>
-                            <constraint firstAttribute="height" constant="21" id="q7c-yd-mfD"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,13 +43,14 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="7CK-JA-LAs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="M13-KL-uoh"/>
                     <constraint firstItem="8OP-rT-70w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Mgs-8j-rWc"/>
+                    <constraint firstAttribute="bottom" secondItem="7CK-JA-LAs" secondAttribute="bottom" constant="1" id="N1i-ty-SMZ"/>
                     <constraint firstAttribute="bottom" secondItem="8OP-rT-70w" secondAttribute="bottom" constant="20" id="OHf-XS-7QT"/>
                     <constraint firstItem="pjo-Q4-YZE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="R4m-6W-W4a"/>
-                    <constraint firstAttribute="trailing" secondItem="pjo-Q4-YZE" secondAttribute="trailing" constant="57" id="Uhy-Q2-113"/>
-                    <constraint firstAttribute="trailing" secondItem="8OP-rT-70w" secondAttribute="trailing" constant="57" id="k19-h8-qjp"/>
-                    <constraint firstItem="8OP-rT-70w" firstAttribute="top" secondItem="pjo-Q4-YZE" secondAttribute="bottom" constant="8" id="tbQ-zT-gcM"/>
-                    <constraint firstItem="pjo-Q4-YZE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vpd-NC-4Ct"/>
+                    <constraint firstAttribute="trailing" secondItem="7CK-JA-LAs" secondAttribute="trailing" constant="20" id="ruG-lo-J49"/>
+                    <constraint firstItem="8OP-rT-70w" firstAttribute="top" secondItem="pjo-Q4-YZE" secondAttribute="bottom" constant="5" id="tbQ-zT-gcM"/>
+                    <constraint firstItem="pjo-Q4-YZE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="vpd-NC-4Ct"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" name="main-blue"/>
@@ -53,11 +58,13 @@
             <connections>
                 <outlet property="Label" destination="pjo-Q4-YZE" id="rSV-b3-BO9"/>
                 <outlet property="profilData" destination="8OP-rT-70w" id="El6-aO-2H7"/>
+                <outlet property="separator" destination="7CK-JA-LAs" id="dQ0-4S-zrt"/>
             </connections>
-            <point key="canvasLocation" x="180.43478260869566" y="126.5625"/>
+            <point key="canvasLocation" x="147" y="131"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Line" width="349" height="1"/>
         <namedColor name="main-blue">
             <color red="0.10999999940395355" green="0.21600000560283661" blue="0.35699999332427979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

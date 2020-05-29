@@ -21,6 +21,7 @@ class SignInVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
 
         pickerView.delegate = self
         pickerView.dataSource = self

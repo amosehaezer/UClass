@@ -21,6 +21,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 10
+        self.hideKeyboardWhenTappedAround()
 }
     
     @IBAction func loginBtn(_ sender: Any) {

@@ -12,6 +12,7 @@ class ProfilViewCell: UITableViewCell {
 
     @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var profilData: UILabel!
+    @IBOutlet weak var separator: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

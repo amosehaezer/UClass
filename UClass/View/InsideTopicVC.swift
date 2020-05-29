@@ -37,6 +37,7 @@ class InsideTopicVC: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
     
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         self.tableView.dataSource = self
         self.tableView.delegate = self
         tableView.sectionHeaderHeight = UITableView.automaticDimension

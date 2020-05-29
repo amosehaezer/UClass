@@ -100,7 +100,7 @@ class HomeVC: UIViewController, AddClassData {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         navigationController?.navigationBar.isHidden = true
 //        firstInit()
         var name = ""

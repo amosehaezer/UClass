@@ -114,6 +114,7 @@ class AddDiscussionVC: UIViewController, UIImagePickerControllerDelegate,  UINav
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
 
         docName.alpha = 0

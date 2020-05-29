@@ -49,7 +49,7 @@ class DiscussionVC: UIViewController {
     @IBOutlet weak var discussionsTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addDiscussion))
         self.discussionsTableView.dataSource = self
         self.discussionsTableView.delegate = self

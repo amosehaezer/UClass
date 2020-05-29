@@ -40,6 +40,9 @@ class ProfilVC: UIViewController, UIImagePickerControllerDelegate & UINavigation
         self.imageProfil.layer.masksToBounds = true
         self.imageProfil.clipsToBounds = true
         
+        dataProfil.rowHeight = UITableView.automaticDimension
+        dataProfil.estimatedRowHeight = 600
+        
         
         var email: String = ""
         let id = Auth.auth().currentUser?.uid
@@ -58,14 +61,14 @@ class ProfilVC: UIViewController, UIImagePickerControllerDelegate & UINavigation
         }
         
         print("\(name)    \(email)")
-        profilData.append(ProfilData(LabelName: "Nama", DataName: "Selena Strange"))
+        profilData.append(ProfilData(LabelName: "Name", DataName: "Selena Strange"))
         profilData.append(ProfilData(LabelName: "Email", DataName: "selena.s@gmail.com"))
         
         self.dataProfil.delegate = self
         self.dataProfil.dataSource = self
         
        dataProfil.layer.cornerRadius = 20
-       dataProfil.layer.masksToBounds = true
+//       dataProfil.layer.masksToBounds = true
         setupTableView()
         
          
@@ -130,6 +133,9 @@ extension ProfilVC: UITableViewDataSource{
         guard let cell = dataProfil.dequeueReusableCell(withIdentifier: "ProfilViewCell", for: indexPath) as? ProfilViewCell else { fatalError("Error")}
         cell.Label.text = profilData[indexPath.row].LabelName
         cell.profilData.text = profilData[indexPath.row].DataName
+        if indexPath.row == 1{
+            cell.separator.isHidden = true
+        }
 //        cell.profilData.layer.cornerRadius = 10
        
         

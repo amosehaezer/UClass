@@ -113,7 +113,7 @@ class AddReplyVC: UIViewController, UIImagePickerControllerDelegate,  UINavigati
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hideKeyboardWhenTappedAround()
 
         docName.alpha = 0
         
