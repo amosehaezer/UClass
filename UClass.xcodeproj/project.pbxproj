@@ -58,6 +58,10 @@
 		F0AE90BF247EA999002774E7 /* AssignmentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AE90BD247EA999002774E7 /* AssignmentHeaderView.swift */; };
 		F0AE90C0247EA999002774E7 /* AssignmentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0AE90BE247EA999002774E7 /* AssignmentHeaderView.xib */; };
 		F0B03B2E247D057C00DCBB15 /* TeacherAddTopicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B03B2D247D057C00DCBB15 /* TeacherAddTopicVC.swift */; };
+		F0D412402480B6D100BF911B /* ProfilViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D4123E2480B6D100BF911B /* ProfilViewCell.swift */; };
+		F0D412412480B6D100BF911B /* ProfilViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D4123F2480B6D100BF911B /* ProfilViewCell.xib */; };
+		F0D412432480D71700BF911B /* AddReplyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D412422480D71700BF911B /* AddReplyVC.swift */; };
+		F0D412452480D9FD00BF911B /* AddDiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D412442480D9FD00BF911B /* AddDiscussionVC.swift */; };
 		F0DA6A65247EC2D000136947 /* AddReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DA6A63247EC2D000136947 /* AddReplyCell.swift */; };
 		F0DA6A66247EC2D000136947 /* AddReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0DA6A64247EC2D000136947 /* AddReplyCell.xib */; };
 		F0DD22A8247BE91F0052088C /* DiscussionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD22A7247BE91F0052088C /* DiscussionVC.swift */; };
@@ -138,6 +142,10 @@
 		F0AE90BD247EA999002774E7 /* AssignmentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentHeaderView.swift; sourceTree = "<group>"; };
 		F0AE90BE247EA999002774E7 /* AssignmentHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignmentHeaderView.xib; sourceTree = "<group>"; };
 		F0B03B2D247D057C00DCBB15 /* TeacherAddTopicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAddTopicVC.swift; sourceTree = "<group>"; };
+		F0D4123E2480B6D100BF911B /* ProfilViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewCell.swift; sourceTree = "<group>"; };
+		F0D4123F2480B6D100BF911B /* ProfilViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilViewCell.xib; sourceTree = "<group>"; };
+		F0D412422480D71700BF911B /* AddReplyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReplyVC.swift; sourceTree = "<group>"; };
+		F0D412442480D9FD00BF911B /* AddDiscussionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiscussionVC.swift; sourceTree = "<group>"; };
 		F0DA6A63247EC2D000136947 /* AddReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReplyCell.swift; sourceTree = "<group>"; };
 		F0DA6A64247EC2D000136947 /* AddReplyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddReplyCell.xib; sourceTree = "<group>"; };
 		F0DD22A7247BE91F0052088C /* DiscussionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionVC.swift; sourceTree = "<group>"; };
@@ -234,7 +242,7 @@
 		F04BBB07247BEA1300806000 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F0AE90B4247EA73A002774E7 /* Assignment */,
+				F0AE90B4247EA73A002774E7 /* Profile */,
 				F0AE90AD247EA60C002774E7 /* Inside */,
 				F0AED2ED247D94C200D19366 /* EditStudent */,
 				F0690665247D8DD000AF74A3 /* Dashboard */,
@@ -251,6 +259,8 @@
 				F0B03B2D247D057C00DCBB15 /* TeacherAddTopicVC.swift */,
 				F0A8E55B247C092300E5BE26 /* LoginVC.swift */,
 				F0E0A250247F64D700B00D18 /* SignUpVC.swift */,
+				F0D412422480D71700BF911B /* AddReplyVC.swift */,
+				F0D412442480D9FD00BF911B /* AddDiscussionVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,11 +320,13 @@
 			path = Inside;
 			sourceTree = "<group>";
 		};
-		F0AE90B4247EA73A002774E7 /* Assignment */ = {
+		F0AE90B4247EA73A002774E7 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F0D4123E2480B6D100BF911B /* ProfilViewCell.swift */,
+				F0D4123F2480B6D100BF911B /* ProfilViewCell.xib */,
 			);
-			path = Assignment;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F0AED2ED247D94C200D19366 /* EditStudent */ = {
@@ -455,6 +467,7 @@
 				EE2499CC2473D2C800DBB3CD /* SF-Pro-Text-Thin.otf in Resources */,
 				F0606371247BE8590096BA71 /* DiscussionHeaderView.xib in Resources */,
 				EE2499C42473D2C800DBB3CD /* SF-Pro-Text-Light.otf in Resources */,
+				F0D412412480B6D100BF911B /* ProfilViewCell.xib in Resources */,
 				F00DEE7B247D93ED00722C77 /* StudentViewCell.xib in Resources */,
 				EE2499C62473D2C800DBB3CD /* SF-Pro-Text-Medium.otf in Resources */,
 				F083ECD0247D906000C146F1 /* GoogleService-Info.plist in Resources */,
@@ -533,8 +546,10 @@
 				F0FB2C3B246A9C0F00CAE4A2 /* ViewController.swift in Sources */,
 				F0DD22A8247BE91F0052088C /* DiscussionVC.swift in Sources */,
 				F0E0A253247F990200B00D18 /* User.swift in Sources */,
+				F0D412432480D71700BF911B /* AddReplyVC.swift in Sources */,
 				F0025493247D8A4800530A7C /* ClassSection.swift in Sources */,
 				F0FB2C37246A9C0F00CAE4A2 /* AppDelegate.swift in Sources */,
+				F0D412402480B6D100BF911B /* ProfilViewCell.swift in Sources */,
 				F0406E57247D12B2002CD614 /* NotificationVC.swift in Sources */,
 				F0AE90B2247EA67E002774E7 /* InsideTopicSeeAll.swift in Sources */,
 				F002548F247D8A3300530A7C /* AssignmentHomeCell.swift in Sources */,
@@ -552,6 +567,7 @@
 				F0406E54247D1287002CD614 /* NotificationCell.swift in Sources */,
 				F0B03B2E247D057C00DCBB15 /* TeacherAddTopicVC.swift in Sources */,
 				EE33DB52247C0CAC008B5242 /* ForgotPasswordViewController.swift in Sources */,
+				F0D412452480D9FD00BF911B /* AddDiscussionVC.swift in Sources */,
 				EE33DB5B247E5301008B5242 /* AddClassVC.swift in Sources */,
 				F0AE90AF247EA632002774E7 /* InsideTopicVC.swift in Sources */,
 				F0FB2C41246A9C0F00CAE4A2 /* UClass.xcdatamodeld in Sources */,

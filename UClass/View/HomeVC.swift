@@ -80,7 +80,7 @@ class HomeVC: UIViewController, AddClassData {
     ]
     
     public var userSubject : [testSubject] = []
-    
+    public var userProfil: [currentUser] = []
 
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var headerView: UIView!
@@ -92,6 +92,9 @@ class HomeVC: UIViewController, AddClassData {
     var className: String? = "Josia"
     var classSubject: String? = "Mannuel"
     var studentsEmail: [String]? = [""]
+    var profilName: String? = "Prof. Selena Strange"
+    var profilEmail: String? = "anitamiles@yahoo.com"
+    var profilImage = UIImage(imageLiteralResourceName: "profile-4")
     
     var templist: [testSubject] = []
     
@@ -99,25 +102,45 @@ class HomeVC: UIViewController, AddClassData {
         super.viewDidLoad()
         
         navigationController?.navigationBar.isHidden = true
-        firstInit()
+//        firstInit()
+        var name = ""
+        var role = 0
         let nonLetters  = CharacterSet.letters.inverted
-        let name = (testUser.name.components(separatedBy: nonLetters).first)!
+//        let name = (testUser.name.components(separatedBy: nonLetters).first)!
         
-//        let id = Auth.auth().currentUser?.uid
-//        var name = Services.shared.oneUserData(uid: id!)
+        let id = Auth.auth().currentUser?.uid
+        
         
         homeProfileImage.image = UIImage(named: testUser.profileImage)
         homeProfileImage.layer.cornerRadius = homeProfileImage.frame.height/2
-        if testUser.role == "student"{
-            roleLabel.text = "Student"
-        } else {roleLabel.text = "Teacher"}
-        print(name)
+//        if testUser.role == "student"{
+//            roleLabel.text = "Student"
+//        } else {roleLabel.text = "Teacher"}
         
-        welcomeLabel.text = "Hello, \(name)"
+        Services.shared.oneUserData(uid: id!) { (result) in
+            DispatchQueue.main.async {
+                if result != nil {
+//                    print(result?.name)
+                    name = result?.name as! String
+                    role = result?.role as! Int
+                    self.welcomeLabel.text = "Hello, \((name.components(separatedBy: nonLetters).first)!)"
+                    
+                    if role == 0 {
+                        self.roleLabel.text = "Student"
+                    } else if role == 1 {
+                        self.roleLabel.text = "Teacher"
+                    }
+                } else {
+                    print("DEBUG: User not found!")
+                }
+            }
+        }
+
         headerView.layer.cornerRadius = 20
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        uiTap()
         editButton.layer.cornerRadius = 12
 
         tableView.rowHeight = UITableView.automaticDimension
@@ -175,25 +198,29 @@ class HomeVC: UIViewController, AddClassData {
         
     }
     
-    func firstInit() {
-        
-        var data: [String: Any]
-        var assignment: String = ""
-        
-        data = [
-            "courseName": "Mathematics",
-            "courseClass": "XII IPA 4",
-            "ownerID": "",
-            "Assignment" : [assignment],
-        ]
-        
-        Services.shared.addUser(userData: data) {
-            print("DEBUG: add Data Success")
-        }
-    }
+//    func firstInit() {
+//
+//        var data: [String: Any]
+//        var assignment: String = ""
+//
+//        data = [
+//            "courseName": "Mathematics",
+//            "courseClass": "XII IPA 4",
+//            "ownerID": "",
+//            "Assignment" : [assignment],
+//        ]
+//
+//        Services.shared.addUser(userData: data) {
+//            print("DEBUG: add Data Success")
+//        }
+//    }
     
     func AddClassPage() {
         performSegue(withIdentifier: "toAddClass", sender: UIButton.self)
+    }
+    
+    func sendProfilData(profilName: String, profilEmail: String, profilImage: UIImage){
+        userProfil.append(testUser)
     }
     
     func sendClassData(className: String, classSubject: String, studentsEmail: [String]) {
@@ -229,8 +256,29 @@ class HomeVC: UIViewController, AddClassData {
            present(actionSheet, animated: true, completion: nil)
        }
     
+    func uiTap(){
+            let tap = UITapGestureRecognizer(target: self, action: #selector(HomeVC.viewTapped))
+            headerView.addGestureRecognizer(tap)
+           
+            
+            
+    //        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.viewTapped))
+    //        tap.delegate = self
+    //        homeProfileImage.addGestureRecognizer(tap)
+    //        //performSegue(withIdentifier: "toProfil", sender: self)
+
+    //        viewTapped(sender: homeProfileImage)
+            
+        }
+        
+    @objc func viewTapped(){
+        performSegue(withIdentifier: "toProfil", sender: self)
+    }
+    
     
 }
+
+    
 
 extension HomeVC: UITableViewDataSource {
     
@@ -331,6 +379,8 @@ extension HomeVC: UITableViewDataSource {
             c.studentsEmail = self.studentsEmail
             c.delegate = self
             c.instaceHVC = self
+        } else if segue.identifier == "toProfil" {
+            let pro = segue.destination as! ProfilVC
         }
     }
 }

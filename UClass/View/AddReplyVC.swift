@@ -1,17 +1,16 @@
 //
-//  TeacherAddTopicViewController.swift
+//  AddReplyVC.swift
 //  UClass
 //
-//  Created by laurens bryan on 19/05/20.
+//  Created by Amos Ebenhaezer on 29/05/20.
 //  Copyright © 2020 Amos Ebenhaezer. All rights reserved.
 //
 
 import UIKit
 import MobileCoreServices
 
-class TeacherAddTopicVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIDocumentPickerDelegate{
-    
-    @IBOutlet weak var titleTextField: UITextField!
+class AddReplyVC: UIViewController, UIImagePickerControllerDelegate,  UINavigationControllerDelegate, UIDocumentPickerDelegate {
+
     @IBOutlet weak var descriptionUIView: UIView!
     @IBOutlet weak var descriptionTextView: UITextView!
     
@@ -143,4 +142,5 @@ class TeacherAddTopicVC: UIViewController, UINavigationControllerDelegate, UIIma
     @IBAction func cancelBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
 }

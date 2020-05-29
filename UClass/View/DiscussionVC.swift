@@ -50,7 +50,7 @@ class DiscussionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addDiscussion))
         self.discussionsTableView.dataSource = self
         self.discussionsTableView.delegate = self
         setupTableView()
@@ -95,14 +95,7 @@ class DiscussionVC: UIViewController {
         }
         let isExpanded = testList[section].isExpanded
         testList[section].isExpanded = !isExpanded
-        
-        
-        
-        
-        
-        
         if isExpanded {
-            
             button.setTitle("Replies (\(testList[section].replies.count)) 􀆈", for: .normal)
             discussionsTableView.deleteRows(at: indexPaths, with: .fade)
             
@@ -117,6 +110,10 @@ class DiscussionVC: UIViewController {
         discussionsTableView.reloadData()
 
 
+    }
+    
+    @objc func addDiscussion() {
+        performSegue(withIdentifier: "toAddDiscussion", sender: nil)
     }
     
     @objc func liked(button : UIButton){
@@ -225,7 +222,10 @@ class DiscussionVC: UIViewController {
             testList[section].isPinned = false
         }
         discussionsTableView.reloadData()
-        
+    }
+    
+    @objc func addReply() {
+        performSegue(withIdentifier: "toReply", sender: nil)
     }
     
 }
@@ -248,6 +248,7 @@ extension DiscussionVC: UITableViewDataSource {
         case testList[section].replies.count:
             if let cell = discussionsTableView.dequeueReusableCell(withIdentifier: "addReply") as? AddReplyCell{
                 cell.containerView.layer.cornerRadius = 20
+                cell.addReplyButton.addTarget(self, action: #selector(addReply), for: .touchUpInside)
                 return cell
             } else{
                 return AddReplyCell()

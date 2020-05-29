@@ -8,17 +8,17 @@
 
 import Foundation
 
-public struct User {
-    
-    var uid: String = ""
-    var name: String = ""
-    var email: String = ""
-    var role: Int = 0
-    
-    enum CodingKeys: String, CodingKey {
-        case uid
-        case name
-        case email
-        case role
-    }
-}
+//struct User {
+//    
+//    var uid: String
+//    var name: String
+//    var email: String
+//    var role: Int
+//    
+//    enum CodingKeys: String, CodingKey {
+//        case uid
+//        case name
+//        case email
+//        case role
+//    }
+//}

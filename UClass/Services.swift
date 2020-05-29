@@ -19,6 +19,21 @@ let COMMENT_REF = DB_REF.collection("comments")
 let CLASS_REF = DB_REF.collection("classes")
 let db = Firestore.firestore()
 
+struct User {
+    
+    var uid: String = ""
+    var name: String = ""
+    var email: String = ""
+    var role: Int = 0
+    
+    enum CodingKeys: String, CodingKey {
+        case uid
+        case name
+        case email
+        case role
+    }
+}
+
 struct Services {
     static let shared = Services()
     
@@ -71,30 +86,20 @@ struct Services {
         }
     }
     
-    func oneUserData(uid: String) {
+    func oneUserData(uid: String, fetchUser: @escaping(_ result: User?) -> Void ) {
         let read = db.collection("users").whereField("uid", isEqualTo: uid)
             .getDocuments() { (querySnapshot, err) in
                 if let err = err {
                     print("Error getting documents: \(err)")
                     return
-                } else {
-                        let x = querySnapshot?.documents.first?.data()
-                        guard let email = x!["email"] as? String else {return}
+                }
+                    guard let x = querySnapshot?.documents.first?.data() else {return fetchUser(nil)}
+                    guard let email = x["email"] as? String else {return}
 //                        self.getEmail(email: email)
-                        guard let name = x!["name"] as? String else {return}
-                        guard let uid = x!["uid"] as? String else {return}
-                        guard let role = x!["role"] as? Int else {return}
-                        var u = User(uid: uid, name: name, email: email, role: role)
-                        u.email = email
-                        u.name = name
-                    print(u.name)
-//                        u.email = email
-//                        u.name = name
-//                        u.role = role
-//                        u.uid = uid
-//                    return tempEmail
-//                }
-            }
+                    guard let name = x["name"] as? String else {return}
+                    guard let uid = x["uid"] as? String else {return}
+                    guard let role = x["role"] as? Int else {return}
+                    fetchUser(User(uid: uid, name: name, email: email, role: role))
         }
     }
     

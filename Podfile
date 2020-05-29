@@ -10,7 +10,7 @@ target 'UClass' do
   pod 'Firebase'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'Firebase/Storage'
+#  pod 'Firebase/Storage'
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
   # Pods for UClass

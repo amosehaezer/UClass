@@ -38,6 +38,7 @@ class SignUpVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
       }
     
     @IBAction func SignupButton(_ sender: UIButton) {
+        self.rolePick()
         self.createUser()
         
     }
@@ -67,10 +68,10 @@ class SignUpVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     func rolePick(){
         if role == ["Student"]{
-        RoleField.text = "0"
+//            RoleField.text = "0"
             saveRole = 0
-        }else{
-        RoleField.text = "1"
+        } else {
+//        RoleField.text = "1"
             saveRole = 1
         }
     }
